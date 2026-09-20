@@ -180,8 +180,8 @@
       "page": "quant-research.html",
       "title": "Financial AI and the metals research desk",
       "skill": "Time series / model validation / data provenance",
-      "summary": "Gold, silver and energy work connects market-state modelling to data capture, statistical testing and explicit decision gates. The professional value is a reviewable research process.",
-      "state": "Historical technical evidence inspected; source-only Finance Lab rebuild invalid; no approved trading portfolio.",
+      "summary": "Gold, silver and energy work connects market-state modelling to data capture, statistical testing and explicit decision gates. The professional value is a reviewable research process and a paper-only advisory infrastructure.",
+      "state": "Research-continuous market data refreshed through 18 September 2026; advisory outputs updated; live and fully automated trading are disabled.",
       "flow": [
         {
           "name": "CAPTURE",
@@ -205,8 +205,9 @@
           "title": "What the work demonstrates",
           "paragraphs": [
             "The HMM dissertation\u2019s saved reconciliation records 857 weekly observations, train-only preprocessing and prefix-only inference. It explicitly does not establish outperformance over gold buy-and-hold on a comparable window. This is historical replay evidence, not a fresh rerun here.",
+            "The MSc dissertation analysis is frozen pending supervisor input. Continuing gold and silver acquisition uses the same approved source families but is stored as a separate dated RESEARCH_CONTINUOUS product; those observations are not part of the frozen dissertation results.",
             "Finance Lab contains experiment and rejection registries, Monte Carlo diagnostics, Benjamini\u2013Hochberg multiple-testing controls, cost modelling and portfolio diagnostics. Its final matrix closes the candidate family with no pre-holdout eligible candidate and records an untouched holdout. These are valuable negative results.",
-            "The inspected source-input-only rebuild report is INVALID because the permitted raw datasets and full regeneration pipeline were absent from that upgrade root. Portfolio diagnostic inputs are labelled diagnostic; approved portfolio: none."
+            "The inspected source-input-only rebuild report is INVALID because the permitted raw datasets and full regeneration pipeline were absent from that upgrade root. Portfolio diagnostic inputs are labelled diagnostic; approved portfolio: none. The current ingestion stage refreshed gold and silver through 18 September 2026, with validation warnings retained."
           ]
         },
         {
@@ -219,7 +220,7 @@
         {
           "title": "Next demonstrable extension",
           "paragraphs": [
-            "Build an isolated research-only replay from licensed frozen inputs, regenerate ledger and report hashes, and compare a predeclared baseline under costs and stress scenarios. Report uncertainty and failed hypotheses. No live broker, wallet or order execution is part of this portfolio.",
+            "Build an isolated research-only replay from licensed frozen inputs, regenerate ledger and report hashes, and compare a predeclared baseline under costs and stress scenarios. Report uncertainty and failed hypotheses. The current infrastructure can produce advisory and paper-state outputs, but it is not ready for total automated trading and has no real execution path.",
             "A source-backed gap hypothesis is whether release-aware provenance and abstention improve the reliability of market-state decision support under delayed or revised inputs. Novelty remains unestablished; compare against existing backtest-overfitting and point-in-time evaluation research."
           ]
         }
