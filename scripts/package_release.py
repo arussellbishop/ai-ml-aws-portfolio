@@ -10,7 +10,7 @@ for name in ('hosting.json','data-quality.json'):
 rows=[dict(project_id=p['id'],project=p['name'],priority=p['priority'],status=p['status'],evidence=p['evidence'],next_action=p['next_action'],completion_gate=p['completion_gate'],review_date=p['reviewed_on'],verified_percentage='NOT_SCORED') for p in json.loads((ROOT/'data/projects.json').read_text())['projects']]
 fields=['project_id','project','priority','status','evidence','next_action','completion_gate','review_date','verified_percentage']
 stream=io.StringIO();writer=csv.DictWriter(stream,fieldnames=fields,extrasaction='ignore');writer.writeheader();writer.writerows(rows)
-source_files=['Makefile','README.md','quality.py','build.py','build_hosting.py','build_site.py','build_hub.py','infra/hosting.json','infra/data-quality.json','scripts/deploy.py','scripts/package_release.py','scripts/check_browser.py','scripts/build_walkthrough.py']
+source_files=['Makefile','README.md','quality.py','build.py','build_hosting.py','build_site.py','build_hub.py','infra/hosting.json','infra/data-quality.json','scripts/deploy.py','scripts/package_release.py','scripts/check_browser.py','scripts/verify_public.py','scripts/build_walkthrough.py']
 source_files += [str(p.relative_to(ROOT)) for p in sorted((ROOT/'data').glob('*.json'))]
 source_files += [str(p.relative_to(ROOT)) for p in sorted((ROOT/'notebooks').glob('*.ipynb'))]
 source_files += [str(p.relative_to(ROOT)) for p in sorted((ROOT/'tests').glob('test_*.py'))]

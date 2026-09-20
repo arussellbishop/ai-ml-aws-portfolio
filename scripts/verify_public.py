@@ -1,19 +1,27 @@
 """Verify exact release bytes, headers and browser behavior on the live URL."""
-import hashlib,json,urllib.request,urllib.error
+import hashlib,json,urllib.request,urllib.error,time
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 ROOT=Path(__file__).resolve().parents[1]
 record=json.loads((ROOT/'release/deployment.json').read_text())
 manifest=json.loads((ROOT/'release/manifest.json').read_text())
 base=record['site_url']
-checked=[]
-for name,digest in manifest['files'].items():
- with urllib.request.urlopen(base+'/'+name,timeout=30) as response:
-  assert response.status==200,(name,response.status)
-  assert hashlib.sha256(response.read()).hexdigest()==digest,('Hash mismatch',name)
-  for header in ('Content-Security-Policy','Strict-Transport-Security','X-Content-Type-Options','X-Frame-Options'):
-   assert response.headers.get(header),(name,header)
- checked.append(name)
+def verify_file(item):
+ name,digest=item
+ for attempt in range(3):
+  try:
+   with urllib.request.urlopen(base+'/'+name,timeout=30) as response:
+    assert response.status==200,(name,response.status)
+    assert hashlib.sha256(response.read()).hexdigest()==digest,('Hash mismatch',name)
+    for header in ('Content-Security-Policy','Strict-Transport-Security','X-Content-Type-Options','X-Frame-Options'):
+     assert response.headers.get(header),(name,header)
+   return name
+  except urllib.error.URLError:
+   if attempt==2:raise
+   time.sleep(attempt+1)
+with ThreadPoolExecutor(max_workers=4) as pool:
+ checked=list(pool.map(verify_file,manifest['files'].items()))
 class NoRedirect(urllib.request.HTTPRedirectHandler):
  def redirect_request(self,*args):return None
 try:
@@ -48,7 +56,7 @@ with sync_playwright() as p:
  page.screenshot(path=str(ROOT/'release/live-mobile.png'),full_page=True)
  browser.close()
 assert not errors,errors
-report={'site_url':base,'verified_files':checked,'hashes_match':True,'https_redirect':True,'security_headers':True,'missing_page_404':True,'demo_and_search':True,'browser_errors':errors}
+report={'release_sha256':manifest['release_sha256'],'site_url':base,'verified_files':checked,'hashes_match':True,'https_redirect':True,'security_headers':True,'missing_page_404':True,'demo_and_search':True,'browser_errors':errors}
 (ROOT/'release/public-verification.json').write_text(json.dumps(report,indent=2)+'\n')
 record['public_smoke_test']='PASSED'
 (ROOT/'release/deployment.json').write_text(json.dumps(record,indent=2)+'\n')
