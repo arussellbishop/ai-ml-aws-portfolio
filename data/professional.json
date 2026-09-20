@@ -1,5 +1,27 @@
 {
   "reviewed_on": "2026-09-20",
+  "credentials": [
+    {
+      "title": "Google AI Essentials Specialization",
+      "provider": "Google Career Certificates / Coursera",
+      "completed": "2026-06-06",
+      "verification": "https://coursera.org/verify/specialization/7OTD58O3PUVB",
+      "evidence": "Google AI Essentials certificate PDF held in the connected Google Drive",
+      "status": "verified_metadata"
+    },
+    {
+      "title": "AWS learning and exam-preparation evidence",
+      "provider": "Amazon Web Services",
+      "evidence": "AWS Exam Preparation Official Practice Question Sets PDF located in Google Drive; certification status itself is not asserted",
+      "status": "coursework_evidence_only"
+    },
+    {
+      "title": "Azure / Microsoft learning evidence",
+      "provider": "Microsoft Azure",
+      "evidence": "No certificate artifact was confidently identified by the current Drive metadata search; keep this entry pending rather than infer a credential",
+      "status": "not_yet_verified"
+    }
+  ],
   "streams": [
     {
       "page": "integrated-research.html",
