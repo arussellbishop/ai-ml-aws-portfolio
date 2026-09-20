@@ -253,7 +253,7 @@
       "title": "AIOS, agents, RSS and Google automation",
       "skill": "Orchestration / provenance / failure handling",
       "summary": "Local agents, research intake and scheduled data workflows connect operational evidence to human review. AWS hosts the curated public view independently of Ubuntu.",
-      "state": "AIOS central cycle refreshed local state; dashboard service is currently not listening in the audit environment; Gmail/Calendar/Drive connectors are retryable-blocked by OAuth scope state.",
+      "state": "AIOS dashboard active; central cycle and incremental Drive delta publish successfully; Gmail and Calendar read-only connectors verified; external writes remain gated.",
       "flow": [
         {
           "name": "INPUTS",
@@ -283,7 +283,7 @@
         {
           "title": "Google Apps Script: stronger evidence and explicit contradictions",
           "paragraphs": [
-            "The bounded Central Command cycle refreshed local state and published a current brief. Application and project ingestion completed; Gmail, Calendar and the dedicated Drive delta were held as FAILED_RETRYABLE because OAuth/scope attestation failed. No external message or Drive write was attempted.",
+            "The bounded Central Command cycle refreshed local state and published a current brief. Application and project ingestion completed; Gmail and Calendar read-only access is verified, and the repaired Drive delta saw 10,287 checkpointed records, found 3 changes and ingested all 3. No external message or Drive write was attempted.",
             "The Energy workbook REFRESH_AUDIT records daily V2 dispatcher entries through 20 September at 07:33 BST: US oil and gas observations dated 11 September, and ONS hydro updated to 18 September. GIE and ENTSOE are credential-blocked.",
             "The migration and DATA_QUALITY tabs retain older July descriptions that conflict with later refresh records. Current trigger configuration was not independently inspected through the Apps Script API. Monday branches and generated reports still need equivalence checks; workbook modification time alone is insufficient.",
             "Finance dashboard ports 8770 and 8765 refused connections in this check. The public portfolio remains available; original operational services are separate."
