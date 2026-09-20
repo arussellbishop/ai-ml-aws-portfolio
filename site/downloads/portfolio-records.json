@@ -628,13 +628,13 @@
       "category": "Research & MSc",
       "priority": "ACADEMIC",
       "purpose": "Compare proposed research gaps against primary literature and distinguish a promising idea from a demonstrated contribution.",
-      "status": "current search not started",
-      "evidence": "Factory and proposal stages located; not a current systematic review",
-      "result": "Factory and proposal stages located; not a current systematic review This is the current recorded evidence, not an independent production or submission certification.",
+      "status": "TARGETED_PRIMARY_SOURCE_REFRESH_SYSTEMATIC_REVIEW_PENDING",
+      "evidence": "Recovered multi-PhD factory gap matrices; targeted primary-source refresh on 20 September covers AirSwarm, Bristol collective ranking, RAGAS and backtest overfitting.",
+      "result": "Three falsifiable candidate hypotheses are mapped to prior art and evaluation plans; novelty is not established.",
       "reviewed_on": "2026-09-20",
-      "next_action": "Create query/inclusion and claim-evidence matrices",
+      "next_action": "Full-text screening, citation chaining, subject coverage and supervisor feasibility review.",
       "completion_gate": "Verified literature and explicit novelty/feasibility assessment",
-      "score": 35,
+      "score": 50,
       "gates": [
         {
           "id": "purpose",
@@ -647,8 +647,8 @@
           "id": "artifact",
           "label": "Implementation or research artifact",
           "max": 20,
-          "earned": 10,
-          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+          "earned": 20,
+          "evidence": "Factory inventories and missing-evidence report inspected; selected primary records refreshed."
         },
         {
           "id": "reproduce",
@@ -668,8 +668,8 @@
           "id": "presentation",
           "label": "Review package",
           "max": 15,
-          "earned": 10,
-          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+          "earned": 15,
+          "evidence": "Hypothesis-to-prior-art and evaluation mapping published; systematic coverage pending."
         },
         {
           "id": "access",
@@ -795,10 +795,10 @@
       "priority": "P2",
       "purpose": "Collect and organise research sources for repeatable literature discovery and claim checking.",
       "status": "requires current review",
-      "evidence": "Legacy register located",
-      "result": "Legacy register located This is the current recorded evidence, not an independent production or submission certification.",
+      "evidence": "Registered scanner root contains a starter README; substantive gap matrices are in the separate multi-PhD factory.",
+      "result": "Scanner label alone does not demonstrate a functioning current research intake service.",
       "reviewed_on": "2026-09-20",
-      "next_action": "Check scanner freshness and citations",
+      "next_action": "Connect the recovered factory to a logged, deduplicated and freshness-aware research intake pipeline.",
       "completion_gate": "Repeatable search and source provenance",
       "score": 35,
       "gates": [
@@ -814,7 +814,7 @@
           "label": "Implementation or research artifact",
           "max": 20,
           "earned": 10,
-          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+          "evidence": "Starter README inspected; functioning scanner not established."
         },
         {
           "id": "reproduce",
@@ -878,8 +878,8 @@
       "priority": "P1",
       "purpose": "Coordinate project state, scheduled work and evidence through a local operational command dashboard.",
       "status": "local operation recently verified",
-      "evidence": "Dashboard HTTP 200 and central cycle success in preceding session check",
-      "result": "Dashboard HTTP 200 and central cycle success in preceding session check This is the current recorded evidence, not an independent production or submission certification.",
+      "evidence": "Local dashboard HTTP 200 on 20 September; 11 user timers listed across the operational system.",
+      "result": "Persistent local orchestration is reachable. Finance dashboard ports refuse connections; public AWS portfolio is a separate service.",
       "reviewed_on": "2026-09-20",
       "next_action": "Reconcile generated status against fresh evidence",
       "completion_gate": "Accurate private remote dashboard and recovery",
@@ -1135,12 +1135,12 @@
       "priority": "P1",
       "purpose": "Provide a research workspace for market evidence, evaluation and read-only financial dashboards.",
       "status": "research exists operational gaps",
-      "evidence": "19 September capture audit",
-      "result": "A saved dashboard report describes a read-only 33-page local server. It is not publicly deployed, and the report is historical rather than a current health check.",
+      "evidence": "Final component matrix and portfolio diagnostic inspected 20 September; diagnostic tests do not establish deployable trading performance.",
+      "result": "Experiment registries, Monte Carlo and multiple-testing diagnostics exist. No pre-holdout eligible candidate or approved portfolio; source-input-only rebuild report is INVALID.",
       "reviewed_on": "2026-09-20",
-      "next_action": "Reconcile data lineage and evaluation",
+      "next_action": "Reconstruct permitted raw-input pipeline, provenance and ledger independently before any research-ready claim.",
       "completion_gate": "Reproducible cloud research case study",
-      "score": 35,
+      "score": 50,
       "gates": [
         {
           "id": "purpose",
@@ -1153,8 +1153,8 @@
           "id": "artifact",
           "label": "Implementation or research artifact",
           "max": 20,
-          "earned": 10,
-          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+          "earned": 20,
+          "evidence": "Final component and diagnostic reports inspected, including invalid source-only rebuild."
         },
         {
           "id": "reproduce",
@@ -1174,8 +1174,8 @@
           "id": "presentation",
           "label": "Review package",
           "max": 15,
-          "earned": 10,
-          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+          "earned": 15,
+          "evidence": "Quantitative research case study records controls, negative results and reproducibility gaps."
         },
         {
           "id": "access",
@@ -1872,13 +1872,13 @@
       "category": "Agents & automation",
       "priority": "P2",
       "purpose": "Connect robotics prototypes with reproducible software and hardware experiment evidence.",
-      "status": "experiment evidence review needed",
-      "evidence": "6GB project located; prior bounded prototype evidence",
-      "result": "6GB project located; prior bounded prototype evidence This is the current recorded evidence, not an independent production or submission certification.",
+      "status": "OFFLINE_POLICY_TESTS_PASSED_HARDWARE_GATES_REMAIN",
+      "evidence": "Inspected E012 implementation, historical experiment report and fresh 13-test offline run. Expanded robotics case study separates Bristol and Cranfield proposal branches.",
+      "result": "13 E012 offline SLAM and reacquisition-policy tests passed on 20 September 2026; no fresh hardware or multi-drone validation.",
       "reviewed_on": "2026-09-20",
-      "next_action": "Inventory offline/live experiment evidence",
+      "next_action": "Instrument recorded-video latency/loss and compare confidence policies in simulation; validate each physical claim separately.",
       "completion_gate": "Reproducible bounded release and hardware validation",
-      "score": 35,
+      "score": 70,
       "gates": [
         {
           "id": "purpose",
@@ -1891,29 +1891,29 @@
           "id": "artifact",
           "label": "Implementation or research artifact",
           "max": 20,
-          "earned": 10,
-          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+          "earned": 20,
+          "evidence": "E012 implementation and historical report inspected."
         },
         {
           "id": "reproduce",
           "label": "Reproducibility",
           "max": 20,
-          "earned": 0,
-          "evidence": "No verified end-to-end reproduction evidence reviewed."
+          "earned": 5,
+          "evidence": "Fresh bounded offline run recorded; complete hardware reproduction not established."
         },
         {
           "id": "evaluate",
           "label": "Evaluation evidence",
           "max": 20,
-          "earned": 0,
-          "evidence": "No fresh evaluation report verified for this review."
+          "earned": 15,
+          "evidence": "13 offline policy tests pass; hardware and general performance evaluation remain absent."
         },
         {
           "id": "presentation",
           "label": "Review package",
           "max": 15,
-          "earned": 10,
-          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+          "earned": 15,
+          "evidence": "Expanded Ubuntu/Tello case study with architecture, research mapping and limitations."
         },
         {
           "id": "access",
@@ -2037,12 +2037,12 @@
       "priority": "P2",
       "purpose": "Move Energy Desk refresh coordination into a London-time Apps Script dispatcher with daily, weekday and Monday branches.",
       "status": "source inspected remote trigger unverified",
-      "evidence": "Daily London dispatcher, weekday/Monday branches, locks and QA in local Apps Script source; remote install not verified",
-      "result": "Source includes a script lock, one daily dispatcher, weekday and Monday branches, credential-blocked states and two QA checks. A saved source file does not verify that remote triggers are installed.",
+      "evidence": "Source inspected; workbook REFRESH_AUDIT records V2 dispatch through 20 September 07:33 BST, including ONS update and explicit GIE/ENTSOE credential blocks.",
+      "result": "Workbook execution evidence exists. July migration/control descriptions conflict with newer September records; current trigger API and Monday report equivalence are not independently verified.",
       "reviewed_on": "2026-09-20",
-      "next_action": "Audit remote bound script, OAuth scopes and triggers; test a copy before changing production",
+      "next_action": "Reconcile control tabs and source dates; verify trigger configuration and Monday/report generation before disabling fallback.",
       "completion_gate": "Intended triggers and dispatcher QA pass",
-      "score": 55,
+      "score": 65,
       "gates": [
         {
           "id": "purpose",
@@ -2062,8 +2062,8 @@
           "id": "reproduce",
           "label": "Reproducibility",
           "max": 20,
-          "earned": 5,
-          "evidence": "Setup/dispatcher source inspected; remote runtime execution pending."
+          "earned": 10,
+          "evidence": "Workbook-recorded dispatch through 20 September inspected; independent trigger/API replay pending."
         },
         {
           "id": "evaluate",
@@ -2076,8 +2076,8 @@
           "id": "presentation",
           "label": "Review package",
           "max": 15,
-          "earned": 10,
-          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+          "earned": 15,
+          "evidence": "Automation case study reconciles source, workbook evidence and conflicting status descriptions."
         },
         {
           "id": "access",

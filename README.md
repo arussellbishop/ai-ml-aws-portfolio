@@ -1,6 +1,6 @@
 # Russell Bishop — AI engineering and AWS portfolio
 
-The central portfolio contains 60 static pages, 44 public project dossiers, four selected engineering case studies, employer/examiner review routes, transparent readiness scores and an editable synthetic data-quality demo. The private register tracks 46 projects/workstreams. Private administration and original documents are excluded. The demo runs in the browser; the separate Python/S3/Lambda implementation is included for deployment and cloud integration testing.
+The central portfolio contains 66 static pages, 44 public project dossiers, four selected engineering case studies, employer/examiner review routes, transparent readiness scores and an editable synthetic data-quality demo. The private register tracks 46 projects/workstreams. Private administration and original documents are excluded. The demo runs in the browser; the separate Python/S3/Lambda implementation is included for deployment and cloud integration testing.
 
 ## Build and check
 
@@ -59,3 +59,18 @@ AIVouch's 30-test result comes from the dated local audit, not from re-running o
 Three public notebooks are included: two sanitized historical TensorFlow coursework copies (not freshly trained in this audit), and a self-contained standard-library demonstration executed by the release tests. Original submission acceptance is not inferred from filenames.
 
 Keep private working notes and the original evidence outside this public source repository. The local owner notes workspace supports explicit JSON export and does not write to the public site.
+
+
+## Connected professional review
+
+- `robotics.html`: Ubuntu/Tello Air Marshal, networking limits and Bristol/Cranfield research threads.
+- `cran-0091.html`: cognitive-navigation intent, existing-work mapping and a synthetic fusion baseline.
+- `quant-research.html`: metals/HMM/Finance Lab methods, negative results and provenance gaps.
+- `automation.html`: AIOS, agents, RSS, Google dispatcher evidence and proposed cloud migration.
+- `research-gaps.html`: targeted primary-source refresh and falsifiable hypotheses.
+- `capabilities.html`: employer and academic evidence map.
+
+These pages are generated from `data/professional.json`. Run `python3 navigation_demo.py --output navigation-results.json` for the seeded statistical navigation example. It uses only the Python standard library and is not real-sensor or trained-ML validation.
+
+Repository: https://github.com/arussellbishop/ai-ml-aws-portfolio
+Original private project repositories and academic records are not included.

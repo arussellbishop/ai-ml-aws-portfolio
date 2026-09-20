@@ -3,6 +3,7 @@ build:
 	python3 build.py
 	python3 build_hosting.py
 	python3 scripts/build_walkthrough.py
+	python3 navigation_demo.py --output data/navigation-results.json
 	python3 build_hub.py
 	python3 scripts/package_release.py
 check: build

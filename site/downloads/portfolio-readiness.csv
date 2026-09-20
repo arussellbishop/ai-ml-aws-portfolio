@@ -6,13 +6,13 @@ PHD-FINLAND,Finland PhD,35,NOT_INDEPENDENTLY_ESTABLISHED,Revalidate gap and inst
 PROJECT-e72cefcfc818,Education/privacy PhD,35,NOT_INDEPENDENTLY_ESTABLISHED,Refresh primary literature and feasibility
 PROJECT-5b716a4bac51,Drone PhD,35,NOT_INDEPENDENTLY_ESTABLISHED,Link research claims to experiment evidence
 PROJECT-eeb3ce3babff,Financial crime/AML PhD,35,NOT_INDEPENDENTLY_ESTABLISHED,Audit data access and research gap
-PHD-GAPS,Cross-proposal gap search,35,NOT_INDEPENDENTLY_ESTABLISHED,Create query/inclusion and claim-evidence matrices
+PHD-GAPS,Cross-proposal gap search,50,NOT_INDEPENDENTLY_ESTABLISHED,"Full-text screening, citation chaining, subject coverage and supervisor feasibility review."
 PHD-FACTORY,PhD proposal factory,35,NOT_INDEPENDENTLY_ESTABLISHED,Verify readiness gates and source provenance
-RESEARCH-SCANNER,RRIS research scanner,35,NOT_INDEPENDENTLY_ESTABLISHED,Check scanner freshness and citations
+RESEARCH-SCANNER,RRIS research scanner,35,NOT_INDEPENDENTLY_ESTABLISHED,"Connect the recovered factory to a logged, deduplicated and freshness-aware research intake pipeline."
 AIOS-CORE,AI OS core,40,NOT_INDEPENDENTLY_ESTABLISHED,Reconcile generated status against fresh evidence
 PROJECT-ed3aa8ddd9a6,Four-C governed agents,35,NOT_INDEPENDENTLY_ESTABLISHED,Repair connectors then bounded agent evaluations
 TASK-REGISTER,Task/register orchestration,40,NOT_INDEPENDENTLY_ESTABLISHED,Map IDs and derive status from dated evidence
-FINANCE-LAB,Finance Lab,35,NOT_INDEPENDENTLY_ESTABLISHED,Reconcile data lineage and evaluation
+FINANCE-LAB,Finance Lab,50,NOT_INDEPENDENTLY_ESTABLISHED,"Reconstruct permitted raw-input pipeline, provenance and ledger independently before any research-ready claim."
 FINANCE-INGEST,Market data ingestion,35,NOT_INDEPENDENTLY_ESTABLISHED,Calendar-gap report; check failed symbol/oil
 FINANCE-EWMA,EWMA shadow observation,35,NOT_INDEPENDENTLY_ESTABLISHED,Reconcile manifests and history
 FINANCE-GOLD,Gold forward observation,35,NOT_INDEPENDENTLY_ESTABLISHED,Audit point-in-time inputs and weekly append
@@ -21,9 +21,9 @@ HYBRID,Hybrid trading,35,NOT_INDEPENDENTLY_ESTABLISHED,Restore canonical scripts
 FINVIZ,Finviz gap scanner,35,NOT_INDEPENDENTLY_ESTABLISHED,Read objective and entrypoints
 BITGET,Bitget trading bot,35,NOT_INDEPENDENTLY_ESTABLISHED,Audit purpose/configuration read-only
 REVX,RevX grid bot,35,NOT_INDEPENDENTLY_ESTABLISHED,Audit purpose/configuration read-only
-DRONES,Drone robotics,35,NOT_INDEPENDENTLY_ESTABLISHED,Inventory offline/live experiment evidence
+DRONES,Drone robotics,70,NOT_INDEPENDENTLY_ESTABLISHED,Instrument recorded-video latency/loss and compare confidence policies in simulation; validate each physical claim separately.
 GOOGLE,Google/Gmail integration,35,NOT_INDEPENDENTLY_ESTABLISHED,Fresh least-privilege authentication test
-APPS-SCRIPT,Google Apps Script/Energy Desk,55,NOT_INDEPENDENTLY_ESTABLISHED,"Audit remote bound script, OAuth scopes and triggers; test a copy before changing production"
+APPS-SCRIPT,Google Apps Script/Energy Desk,65,NOT_INDEPENDENTLY_ESTABLISHED,Reconcile control tabs and source dates; verify trigger configuration and Monday/report generation before disabling fallback.
 CHATGPT-HISTORY-INGESTION,ChatGPT archive,35,NOT_INDEPENDENTLY_ESTABLISHED,Restore login and reconcile archive inventory
 LOCAL-LLM,Local model integration,35,NOT_INDEPENDENTLY_ESTABLISHED,Benchmark actual workflows
 UNITY-AGENTS,Unity AI agents,35,NOT_INDEPENDENTLY_ESTABLISHED,Define deterministic demo

@@ -1,0 +1,195 @@
+{
+  "scope": "Synthetic scalar position units; no real GNSS, RF interference, Tello flight or trained ML model.",
+  "scenario": "300 steps; GNSS missing steps 100\u2013179; radio +5 bias steps 140\u2013199; odometry drift 0.004 per step.",
+  "method": "Fixed Kalman baseline versus 3-sigma innovation gate; fixed parameters, seeds 0\u201319.",
+  "mean_fixed_rmse": 1.2494920807565268,
+  "mean_gated_rmse": 0.1269539924419349,
+  "gated_lower_rmse_runs": 20,
+  "limitations": [
+    "Engineered fault scenario favours rejection; not evidence of general superiority.",
+    "No calibrated 3D sensor models, covariance-consistency study, independent dataset or timing solution.",
+    "No learned selector; compare learned and robust fusion only in a future frozen evaluation."
+  ],
+  "runs": [
+    {
+      "seed": 0,
+      "input_sha256": "3753f9145595923256e0a95e10f4cdb5210fd7c6ec4dd1aa027798beee5a1981",
+      "fixed_rmse": 1.2627022871901017,
+      "gated_rmse": 0.16429868691806118,
+      "fixed_max_error": 4.032838594860365,
+      "gated_max_error": 0.4145833123854885,
+      "rejected_updates": 61
+    },
+    {
+      "seed": 1,
+      "input_sha256": "15540948d5e1d336f6cd1cfe363753561a6898bd5fdfc889079b1b0bace1d16e",
+      "fixed_rmse": 1.2485433526384992,
+      "gated_rmse": 0.13967109333561636,
+      "fixed_max_error": 4.113139244471416,
+      "gated_max_error": 0.31705002972083207,
+      "rejected_updates": 62
+    },
+    {
+      "seed": 2,
+      "input_sha256": "e47362053fbbdcff72e4ee5bda11e0962f49b93e3d5284f8930dce2d95c4a99c",
+      "fixed_rmse": 1.2296330494950918,
+      "gated_rmse": 0.08982726962766631,
+      "fixed_max_error": 4.014937499330237,
+      "gated_max_error": 0.19372955439548356,
+      "rejected_updates": 61
+    },
+    {
+      "seed": 3,
+      "input_sha256": "79f02b2558853cfc76bc3d0887f9cc94d3edb12ef0abe944a5fdb59767c52ddf",
+      "fixed_rmse": 1.2535374158987767,
+      "gated_rmse": 0.09851150440905522,
+      "fixed_max_error": 4.049628778387959,
+      "gated_max_error": 0.29797624246081966,
+      "rejected_updates": 61
+    },
+    {
+      "seed": 4,
+      "input_sha256": "323560b681caacb8b672b38be642ea189d6451aee7a59d6a01b431741c6d0c64",
+      "fixed_rmse": 1.2702275149146214,
+      "gated_rmse": 0.16564328317756147,
+      "fixed_max_error": 4.042938620822973,
+      "gated_max_error": 0.46175263394125565,
+      "rejected_updates": 61
+    },
+    {
+      "seed": 5,
+      "input_sha256": "36473a885106cc23d682bb2764803b2033b5c0c8d1b2aac75e9616f5ced90e7a",
+      "fixed_rmse": 1.2574944098594247,
+      "gated_rmse": 0.12442273892604182,
+      "fixed_max_error": 4.07281789602656,
+      "gated_max_error": 0.3431188849359259,
+      "rejected_updates": 61
+    },
+    {
+      "seed": 6,
+      "input_sha256": "038d9d6b6af2e147729b8cbe49693184a8538e0a49d0acf626a7357148f94f64",
+      "fixed_rmse": 1.249114179247522,
+      "gated_rmse": 0.11354880528499012,
+      "fixed_max_error": 4.03128790787504,
+      "gated_max_error": 0.4656093396357376,
+      "rejected_updates": 62
+    },
+    {
+      "seed": 7,
+      "input_sha256": "a67d3bb66fc3014bb05bbcbe7babb778d292b8fe97884de842f63d69b1ec43f9",
+      "fixed_rmse": 1.2704047134865515,
+      "gated_rmse": 0.12458611752873455,
+      "fixed_max_error": 4.09892400495216,
+      "gated_max_error": 0.36451638822933674,
+      "rejected_updates": 60
+    },
+    {
+      "seed": 8,
+      "input_sha256": "165f6cc8372e2e1a369bbc023900c23d5812e7db970bbc81187947d9d7d1c1c5",
+      "fixed_rmse": 1.2082105954928795,
+      "gated_rmse": 0.09940031214494821,
+      "fixed_max_error": 3.92183523992572,
+      "gated_max_error": 0.6607855478435004,
+      "rejected_updates": 61
+    },
+    {
+      "seed": 9,
+      "input_sha256": "d463fe64252ed686e6402659d88ca0e1b927c1bbea30716119fda8072a4f7929",
+      "fixed_rmse": 1.2850826544464617,
+      "gated_rmse": 0.17041750236031142,
+      "fixed_max_error": 4.153482181427826,
+      "gated_max_error": 0.5176038875996838,
+      "rejected_updates": 64
+    },
+    {
+      "seed": 10,
+      "input_sha256": "127d6943f2605e7c2da40dd18ec8d96bd0ec96427e73cadf6f93c95a7e8777ea",
+      "fixed_rmse": 1.2238982387697315,
+      "gated_rmse": 0.08152432446264721,
+      "fixed_max_error": 4.027287162621214,
+      "gated_max_error": 0.19577763138495996,
+      "rejected_updates": 61
+    },
+    {
+      "seed": 11,
+      "input_sha256": "f4235272fc47629e70fae928ce43a3712e79672773a48ced3f33b7ca559a8a1d",
+      "fixed_rmse": 1.2486491482195405,
+      "gated_rmse": 0.10838103154568417,
+      "fixed_max_error": 4.061014412544665,
+      "gated_max_error": 0.2735909187101191,
+      "rejected_updates": 62
+    },
+    {
+      "seed": 12,
+      "input_sha256": "9e620c2890c5a7059fcc0a1aa0145b7aa6e15d76f5ffe6241e474ab4aa234aed",
+      "fixed_rmse": 1.2391583421105152,
+      "gated_rmse": 0.12749625131679235,
+      "fixed_max_error": 4.070212828386243,
+      "gated_max_error": 0.28322059859282334,
+      "rejected_updates": 64
+    },
+    {
+      "seed": 13,
+      "input_sha256": "5a7c98d4e13f44ef19986fe0b9e72405670a41382949fffe6a9b0a67ebe28c97",
+      "fixed_rmse": 1.2024591096743114,
+      "gated_rmse": 0.11138786040075391,
+      "fixed_max_error": 3.8372771482807764,
+      "gated_max_error": 0.26778405323971555,
+      "rejected_updates": 61
+    },
+    {
+      "seed": 14,
+      "input_sha256": "1bf2fe755a12508e73a0218249b427368c741d2eb938ab8b90cd36ce9ad9254c",
+      "fixed_rmse": 1.25688520985194,
+      "gated_rmse": 0.15210487603425468,
+      "fixed_max_error": 4.111782637303616,
+      "gated_max_error": 0.33848669711366597,
+      "rejected_updates": 62
+    },
+    {
+      "seed": 15,
+      "input_sha256": "c6ee378e61bba42d55cba34d6e6348879ed4f45f1814cd4a45b2e640f9032e3f",
+      "fixed_rmse": 1.2389940655991305,
+      "gated_rmse": 0.09282646342823378,
+      "fixed_max_error": 4.0353569617732,
+      "gated_max_error": 0.26446237459635213,
+      "rejected_updates": 60
+    },
+    {
+      "seed": 16,
+      "input_sha256": "025d20454d30d90a5010344425751e22f6140506d7d156a06414accb6bb8f8bf",
+      "fixed_rmse": 1.2935453955021474,
+      "gated_rmse": 0.1530377348423946,
+      "fixed_max_error": 4.1837045030623266,
+      "gated_max_error": 0.4033307590094424,
+      "rejected_updates": 60
+    },
+    {
+      "seed": 17,
+      "input_sha256": "31eb80a735214297da37f5c50451528ae90a521c8918c805f4db1182f6f9d7f4",
+      "fixed_rmse": 1.2452332478318113,
+      "gated_rmse": 0.11759427718209803,
+      "fixed_max_error": 3.9579269494322524,
+      "gated_max_error": 0.2590855141669621,
+      "rejected_updates": 61
+    },
+    {
+      "seed": 18,
+      "input_sha256": "2ec8c7b93d6030e78db0a2e397f609ed71dfda9e0ebfcd27b397f758bb6c296d",
+      "fixed_rmse": 1.3006433201863472,
+      "gated_rmse": 0.19182658901564256,
+      "fixed_max_error": 4.184381392994492,
+      "gated_max_error": 0.5260455731837261,
+      "rejected_updates": 62
+    },
+    {
+      "seed": 19,
+      "input_sha256": "d155687a8d49f127dd4c29d40356031864cb2f8237685bd7b922d42c82025c9a",
+      "fixed_rmse": 1.2054253647151325,
+      "gated_rmse": 0.11257312689720929,
+      "fixed_max_error": 3.9735723582354368,
+      "gated_max_error": 0.6059050959910467,
+      "rejected_updates": 63
+    }
+  ]
+}

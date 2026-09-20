@@ -1,0 +1,422 @@
+{
+  "reviewed_on": "2026-09-20",
+  "streams": [
+    {
+      "page": "robotics.html",
+      "title": "Air Marshal: Ubuntu and Tello robotics",
+      "skill": "Computer vision / concurrency / experimental design",
+      "summary": "A home robotics lab connects perception, telemetry, state machines and human supervision to testable questions about reliable small robot teams.",
+      "state": "13 E012 SLAM policy tests freshly passed; hardware and multi-drone claims remain bounded by individual experiment records.",
+      "flow": [
+        {
+          "name": "SENSORS",
+          "detail": "Tello video and telemetry"
+        },
+        {
+          "name": "EDGE",
+          "detail": "Ubuntu perception and latest-frame bus"
+        },
+        {
+          "name": "POLICY",
+          "detail": "Air Marshal state and loss handling"
+        },
+        {
+          "name": "EVIDENCE",
+          "detail": "Timestamped experiment records"
+        }
+      ],
+      "sections": [
+        {
+          "title": "What is implemented",
+          "paragraphs": [
+            "The inspected E012 code uses one frame receiver and decoder, a latest-only shared-frame bus, OpenCV ORB monocular visual odometry and a non-commanding search advisor. The SLAM module has no drone-command interface. Thirteen offline tests passed on 20 September 2026, covering concurrency, bounded storage and target-loss policies.",
+            "Earlier project records contain single-Tello connection and flight evidence. The July E012 report explicitly marks passive SLAM and reacquisition integration partial. Fresh offline tests do not demonstrate flight performance, metric mapping or two physical Tellos."
+          ]
+        },
+        {
+          "title": "Ubuntu networking and communication degradation",
+          "paragraphs": [
+            "The proposed multi-Tello topology assigns a USB Wi-Fi interface and Linux network namespace to each drone, with a worker process per interface and a central Ubuntu supervisor over local IPC. This separates address/routing contexts; it does not remove radio-frequency interference.",
+            "Video quality needs separate measurements of received resolution, decoded frame rate, packet loss, latency and corrupt frames. The existing reader does not expose all these measurements. Detector resizing is not established as the cause of poor video.",
+            "Next controlled experiment: passive recorded-video replay and software-injected message delay/loss, with seeded conditions, latency percentiles and event logs. Compare baseline supervision with confidence-aware isolation and reintegration. RF interference generation and live flight are outside this portfolio exercise."
+          ]
+        },
+        {
+          "title": "Bristol and Cranfield research threads",
+          "paragraphs": [
+            "The local proposal matrix separates Bristol Hunt small-swarm organisation, relay/task allocation and collective reliability from Cranfield CRAN-0040 mission interpretation and CRAN-0041 trust-adaptive autonomy. These are historical proposal references, not affiliations, admissions or currently open funded opportunities.",
+            "Bristol\u2019s current university profile supports Edmund Hunt\u2019s small-team swarm research relevance. AirSwarm already addresses low-cost multi-UAV coordination, so using Tellos is not itself a novelty claim. An August 2026 Bristol preprint on collective ranking supplies a newer comparator for belief aggregation.",
+            "The Cranfield reference-number opportunities were not reverified on an accessible official current call page. Preserve the research ideas, but verify the call and supervisor before an application."
+          ]
+        }
+      ],
+      "links": [
+        {
+          "title": "Drone project evidence dossier",
+          "url": "work-drones.html"
+        },
+        {
+          "title": "Drone PhD dossier",
+          "url": "work-project-5b716a4bac51.html"
+        },
+        {
+          "title": "Bristol: Edmund Hunt",
+          "url": "https://www.bristol.ac.uk/person/Edmund-Hunt-29984d09-f9a2-4cba-a20f-f260f1eeb054/"
+        },
+        {
+          "title": "AirSwarm \u2014 primary preprint, March 2025",
+          "url": "https://arxiv.org/abs/2503.06890"
+        },
+        {
+          "title": "Collective ranking \u2014 primary preprint, August 2026",
+          "url": "https://arxiv.org/abs/2608.17690"
+        }
+      ]
+    },
+    {
+      "page": "quant-research.html",
+      "title": "Financial AI and the metals research desk",
+      "skill": "Time series / model validation / data provenance",
+      "summary": "Gold, silver and energy work connects market-state modelling to data capture, statistical testing and explicit decision gates. The professional value is a reviewable research process.",
+      "state": "Historical technical evidence inspected; source-only Finance Lab rebuild invalid; no approved trading portfolio.",
+      "flow": [
+        {
+          "name": "CAPTURE",
+          "detail": "Dated market and physical-source observations"
+        },
+        {
+          "name": "VALIDATE",
+          "detail": "Release calendar, duplicates and provenance"
+        },
+        {
+          "name": "MODEL",
+          "detail": "HMM / EWMA / candidate families"
+        },
+        {
+          "name": "REVIEW",
+          "detail": "Baseline, costs, risk and rejection ledger"
+        }
+      ],
+      "sections": [
+        {
+          "title": "What the work demonstrates",
+          "paragraphs": [
+            "The HMM dissertation\u2019s saved reconciliation records 857 weekly observations, train-only preprocessing and prefix-only inference. It explicitly does not establish outperformance over gold buy-and-hold on a comparable window. This is historical replay evidence, not a fresh rerun here.",
+            "Finance Lab contains experiment and rejection registries, Monte Carlo diagnostics, Benjamini\u2013Hochberg multiple-testing controls, cost modelling and portfolio diagnostics. Its final matrix closes the candidate family with no pre-holdout eligible candidate and records an untouched holdout. These are valuable negative results.",
+            "The inspected source-input-only rebuild report is INVALID because the permitted raw datasets and full regeneration pipeline were absent from that upgrade root. Portfolio diagnostic inputs are labelled diagnostic; approved portfolio: none."
+          ]
+        },
+        {
+          "title": "What makes this useful in a professional review",
+          "paragraphs": [
+            "Show the research question, timestamped input manifest, frozen specification, temporal split, baseline and transaction-cost assumptions before presenting a result. Retain rejected candidates and distinguish exploratory trials from confirmatory evaluation.",
+            "For the metals desk, reconcile the gold decision/input date inconsistency, EWMA aggregate history, stale FRED observations and failed CME capture. Release-aware freshness must distinguish unchanged weekly data from failed ingestion. A new dashboard does not repair those source issues."
+          ]
+        },
+        {
+          "title": "Next demonstrable extension",
+          "paragraphs": [
+            "Build an isolated research-only replay from licensed frozen inputs, regenerate ledger and report hashes, and compare a predeclared baseline under costs and stress scenarios. Report uncertainty and failed hypotheses. No live broker, wallet or order execution is part of this portfolio.",
+            "A source-backed gap hypothesis is whether release-aware provenance and abstention improve the reliability of market-state decision support under delayed or revised inputs. Novelty remains unestablished; compare against existing backtest-overfitting and point-in-time evaluation research."
+          ]
+        }
+      ],
+      "links": [
+        {
+          "title": "Finance Lab dossier",
+          "url": "work-finance-lab.html"
+        },
+        {
+          "title": "HMM dissertation dossier",
+          "url": "work-project-106965784f2d.html"
+        },
+        {
+          "title": "Metals source monitor",
+          "url": "work-finance-metals.html"
+        },
+        {
+          "title": "Colab market experiments",
+          "url": "work-colab-markets.html"
+        },
+        {
+          "title": "The probability of backtest overfitting \u2014 author paper",
+          "url": "https://www.davidhbailey.com/dhbpapers/backtest-prob.pdf"
+        }
+      ]
+    },
+    {
+      "page": "automation.html",
+      "title": "AIOS, agents, RSS and Google automation",
+      "skill": "Orchestration / provenance / failure handling",
+      "summary": "Local agents, research intake and scheduled data workflows connect operational evidence to human review. AWS hosts the curated public view independently of Ubuntu.",
+      "state": "AIOS HTTP 200 today; Energy workbook audit current; source gaps and stale control descriptions remain.",
+      "flow": [
+        {
+          "name": "INPUTS",
+          "detail": "RSS / documents / market sources"
+        },
+        {
+          "name": "CONTROL",
+          "detail": "AIOS cases, locks and scheduling"
+        },
+        {
+          "name": "EVALUATE",
+          "detail": "Source provenance, freshness and QA"
+        },
+        {
+          "name": "PUBLISH",
+          "detail": "Reviewed snapshot to AWS"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Existing engineering work",
+          "paragraphs": [
+            "AIOS Central Command uses persistent cases, a project register, governed timers and a local dashboard. The localhost dashboard returned HTTP 200 on 20 September. The Four-C stage is designed for read-only governed coordination; stage outputs remain provisional until promoted.",
+            "User timers cover central cycles, archival work, daily metals monitoring, weekday observations and weekly confirmation/backup. A timer firing does not prove source completeness. The Hybrid RSS and price capture audit records missing canonical scripts; the RSS pipeline cannot be advertised as fully operational."
+          ]
+        },
+        {
+          "title": "Google Apps Script: stronger evidence and explicit contradictions",
+          "paragraphs": [
+            "The Energy workbook REFRESH_AUDIT records daily V2 dispatcher entries through 20 September at 07:33 BST: US oil and gas observations dated 11 September, and ONS hydro updated to 18 September. GIE and ENTSOE are credential-blocked.",
+            "The migration and DATA_QUALITY tabs retain older July descriptions that conflict with later refresh records. Current trigger configuration was not independently inspected through the Apps Script API. Monday branches and generated reports still need equivalence checks; workbook modification time alone is insufficient.",
+            "Finance dashboard ports 8770 and 8765 refused connections in this check. The public portfolio remains available; original operational services are separate."
+          ]
+        },
+        {
+          "title": "Cloud migration design \u2014 proposed, not deployed",
+          "paragraphs": [
+            "Preserve Ubuntu as an optional development and robotics edge device. Move bounded scheduled captures first: EventBridge schedule to a scoped worker, private versioned S3 for source snapshots, validation and quarantine, then a reviewed public summary. Store provider credentials in a managed secret store.",
+            "Add failure queues, alarms, idempotency keys and an independent restore check before retiring local schedules. Deploy one workload at a time and measure cost. The current live AWS deployment is the static portfolio, not this operational architecture.",
+            "Robotics latency-sensitive control remains at the edge. AWS can store approved experiment summaries and run offline analysis; the public dashboard is not a remote drone-control endpoint."
+          ]
+        }
+      ],
+      "links": [
+        {
+          "title": "AIOS dossier",
+          "url": "work-aios-core.html"
+        },
+        {
+          "title": "Four-C agents dossier",
+          "url": "work-project-ed3aa8ddd9a6.html"
+        },
+        {
+          "title": "Apps Script dossier",
+          "url": "work-apps-script.html"
+        },
+        {
+          "title": "Research scanner dossier",
+          "url": "work-research-scanner.html"
+        },
+        {
+          "title": "AWS deployed architecture",
+          "url": "architecture.html"
+        }
+      ]
+    },
+    {
+      "page": "research-gaps.html",
+      "title": "Research gaps: sources, hypotheses and tests",
+      "skill": "Literature review / research design / critical evaluation",
+      "summary": "Reviving the existing RRIS proposal factory with dated primary-source checks, explicit counterexamples and falsifiable study designs.",
+      "state": "Targeted source refresh completed; this is not an exhaustive systematic review or a proven novelty claim.",
+      "flow": [
+        {
+          "name": "SEARCH",
+          "detail": "Recorded queries and primary sources"
+        },
+        {
+          "name": "SCREEN",
+          "detail": "Inclusion, exclusions and access limits"
+        },
+        {
+          "name": "COMPARE",
+          "detail": "Prior art against proposed contribution"
+        },
+        {
+          "name": "TEST",
+          "detail": "Baseline, ablation and feasibility"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Recovered project and current coverage",
+          "paragraphs": [
+            "The existing multi-PhD factory contains literature inventories, gap matrices and subject packs spanning drone autonomy, financial AI, education/privacy, graph AML, agents and energy. Its own missing-evidence report flags incomplete recent full text, empirical coverage, datasets and supervisor verification. The nominal RRIS Research Scanner folder contains only a starter README.",
+            "This refresh verifies selected primary records for robotics, quantitative evaluation and RAG evaluation. Education/privacy and AML remain in the catalogue with their coverage gaps; they have not silently become current systematic reviews."
+          ]
+        },
+        {
+          "title": "Three hypotheses to investigate",
+          "paragraphs": [
+            "Robotics: does dependence-aware confidence and staged reintegration improve collective reliability under correlated sensing errors and delayed messages? Compare against simple averaging and the 2026 Gaussian-belief-propagation study. Measure calibration, ranking error, recovery time and message budget. Start in simulation; physical validation remains a separate gate.",
+            "Financial AI: does a release-aware quality gate improve reliability under delayed or revised metal-market inputs? Compare against a fixed-age freshness rule using frozen temporal splits; measure leakage violations, abstention and stability, not just selected returns. Existing backtest-overfitting research prevents claiming generic evaluation discipline as novel.",
+            "AIOS/RSS: can provenance and freshness gates reduce unsupported claims in research briefs? Compare retrieval-only, standard RAG evaluation and a provenance-gated workflow against human-labelled claims. Measure citation support, stale-source rate, abstention, latency and cost. RAGAS already evaluates retrieval/generation quality, so evaluation alone is not new."
+          ]
+        },
+        {
+          "title": "Search and review protocol",
+          "paragraphs": [
+            "Search date: 20 September 2026. Queries included Bristol Edmund Hunt swarm robotics; Cranfield CRAN-0040/0041; AirSwarm 2503.06890; collective ranking environmental signals; RAGAS; probability of backtest overfitting. Include primary research relevant to the proposed mechanism and evaluation; exclude aggregators as factual authority, duplicates and unsupported summaries.",
+            "Current checks are abstract/metadata level for the cited preprints. Next: read full methods and limitations, search IEEE/ACM/publisher databases and backward/forward citations, record exclusion reasons, and obtain supervisor review. The accessible-source subset cannot prove that a gap exists.",
+            "For MSc review, map methods and results to the actual module rubric and final submitted version. For PhD review, add defensible originality, feasible access and evaluation design. No institutional assessment or admission is inferred."
+          ]
+        }
+      ],
+      "links": [
+        {
+          "title": "Gap-search workstream",
+          "url": "work-phd-gaps.html"
+        },
+        {
+          "title": "Proposal factory",
+          "url": "work-phd-factory.html"
+        },
+        {
+          "title": "AirSwarm",
+          "url": "https://arxiv.org/abs/2503.06890"
+        },
+        {
+          "title": "Bristol collective ranking, August 2026",
+          "url": "https://arxiv.org/abs/2608.17690"
+        },
+        {
+          "title": "RAGAS primary paper",
+          "url": "https://arxiv.org/abs/2309.15217"
+        },
+        {
+          "title": "Backtest-overfitting primary paper",
+          "url": "https://www.davidhbailey.com/dhbpapers/backtest-prob.pdf"
+        }
+      ]
+    },
+    {
+      "page": "cran-0091.html",
+      "title": "CRAN-0091: cognitive navigation research",
+      "skill": "Sensor fusion / uncertainty / resilient navigation",
+      "summary": "A focused bridge from the Ubuntu/Tello lab to a proposed study of sensor reliability and navigation under degraded observations.",
+      "state": "Official project brief checked; local statement mismatch identified; new synthetic baseline executed.",
+      "flow": [
+        {
+          "name": "OBSERVE",
+          "detail": "Timestamped visual, inertial and radio measurements \u2014 proposed"
+        },
+        {
+          "name": "ESTIMATE",
+          "detail": "Fusion baseline and sensor reliability assessment"
+        },
+        {
+          "name": "GOVERN",
+          "detail": "Uncertainty, rejection and recovery policy"
+        },
+        {
+          "name": "VALIDATE",
+          "detail": "Frozen scenarios and independent ground truth"
+        }
+      ],
+      "sections": [
+        {
+          "title": "The official intent",
+          "paragraphs": [
+            "Cranfield CRAN-0091 concerns resilient cognitive navigation with adaptive multisensor fusion for autonomous transport under degraded or unavailable GNSS. The official page lists a 30 September 2026 application deadline and 25 January 2027 start, checked 20 September. Eligibility and selection remain institutional decisions."
+          ]
+        },
+        {
+          "title": "Existing work that supports preparation",
+          "paragraphs": [
+            "Ubuntu/Python Tello perception, telemetry and event logging support experimental engineering. E012 monocular visual odometry and target-loss policies provide an inspected starting point; 13 offline policy tests passed in this portfolio review. HMM temporal evaluation and AIOS provenance offer transferable methods for sequential data and reproducibility.",
+            "These are adjacent capabilities, not proof of completed PNT research. The current monocular output is unscaled; calibrated inertial/radio fusion, navigation ground truth, timing integrity and GNSS-denial validation are not established. Wi-Fi/video degradation is a communication issue and must not be equated with demonstrated GNSS resilience."
+          ]
+        },
+        {
+          "title": "Proposal alignment and document lineage",
+          "paragraphs": [
+            "The existing application folder contains a personal statement for LLM human\u2013swarm collaboration, while an archived navigation-focused draft also exists. Preserve both, but label their purposes correctly. A new navigation alignment brief is prepared separately; the previously submitted version and portal state are not changed.",
+            "Candidate research question: can reliability-aware sensor selection improve estimation accuracy and recovery under missing, biased and delayed observations while maintaining calibrated uncertainty? Start with robust statistical fusion; compare a learned reliability estimator only after a frozen data split and a justified baseline. This is a proposal hypothesis, not an established gap."
+          ]
+        },
+        {
+          "title": "New runnable preparation experiment",
+          "paragraphs": [
+            "A standard-library 1-D simulation compares a fixed-noise Kalman update with a 3-sigma innovation gate on the same 20 seeded scenarios. Mean position RMSE: fixed 1.2495, gated 0.1270, in synthetic units. The gated method has lower RMSE in 20/20 runs.",
+            "The scenario deliberately includes absent GNSS and biased radio measurements. It is an engineered illustration, not a trained AI model, real sensor evaluation or general performance claim. Ground truth is used only for scoring; tests check that changing truth cannot alter the estimates and future observations cannot alter a prefix.",
+            "Download the source bundle and run: python3 navigation_demo.py --output navigation-results.json. The source records fixed parameters, seeds, input hashes and per-run results."
+          ]
+        },
+        {
+          "title": "Work needed to address the full research intent",
+          "paragraphs": [
+            "1. Review navigation/fusion prior art and derive a defensible question. 2. Build a timestamped replay dataset with sensor calibration and independent truth. 3. Compare fixed, robust and learned fusion using identical splits and failure schedules. 4. Assess error, recovery time, covariance consistency, availability and runtime. 5. Test hardware-in-the-loop with suitable equipment and supervision.",
+            "The home lab can support initial software and perception work. Access to calibrated navigation sensors and suitable reference equipment is a research dependency. No airborne trial, active RF interference, admissions message or application submission is performed by this portfolio build."
+          ]
+        }
+      ],
+      "links": [
+        {
+          "title": "Official Cranfield CRAN-0091 brief",
+          "url": "https://www.cranfield.ac.uk/research/phd/ubiquitous-cognitive-navigation-with-ai-based-systems-phd"
+        },
+        {
+          "title": "Ubuntu/Tello case study",
+          "url": "robotics.html"
+        },
+        {
+          "title": "Reproducible source bundle",
+          "url": "downloads/portfolio-source.zip"
+        },
+        {
+          "title": "Synthetic run results",
+          "url": "downloads/navigation-results.json"
+        },
+        {
+          "title": "Research-gap review",
+          "url": "research-gaps.html"
+        }
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "requirement": "AI application engineering",
+      "evidence": "AIVouch API/mobile architecture and 30 previously passed backend tests; AWS data-quality demo.",
+      "gap": "Live AI evaluation, observability and independently reproduced deployment."
+    },
+    {
+      "requirement": "ML methods and evaluation",
+      "evidence": "MNIST, gradient computation, HMM market states and exploratory Colab models.",
+      "gap": "Record clean environment, frozen data, baseline, uncertainty and generalisation limits."
+    },
+    {
+      "requirement": "Cloud architecture",
+      "evidence": "Live CloudFront/private-S3 portfolio; CloudFormation source and release verification.",
+      "gap": "Operational pipeline deployment, failure recovery, IAM review and measured cost."
+    },
+    {
+      "requirement": "Robotics engineering",
+      "evidence": "Ubuntu/Tello architecture and 13 fresh offline SLAM policy tests.",
+      "gap": "Instrumented communication/video measurements and separately authorised hardware evaluation."
+    },
+    {
+      "requirement": "Quantitative research",
+      "evidence": "Holdout policy, rejection ledger, costs and multiple-testing controls.",
+      "gap": "Complete raw-input rebuild; independent replication; no profitability claim."
+    },
+    {
+      "requirement": "Automation and agents",
+      "evidence": "AIOS local service, scheduled jobs, Energy dispatcher audit records.",
+      "gap": "Repair RSS capture, reconcile stale control tabs and test failure paths."
+    },
+    {
+      "requirement": "MSc research evidence",
+      "evidence": "Dissertation technical replay, coursework and reports indexed.",
+      "gap": "Actual rubric, final document audit, submission receipt and examiner outcome."
+    },
+    {
+      "requirement": "PhD research preparation",
+      "evidence": "Proposal branches and source-backed falsifiable hypotheses.",
+      "gap": "Full literature coverage, original contribution, feasible study and institutional review."
+    }
+  ]
+}
