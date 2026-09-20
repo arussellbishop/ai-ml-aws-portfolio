@@ -38,17 +38,19 @@ with sync_playwright() as p:
  assert page.locator('article:visible').count()==sum('examiner' in p['audiences'] for p in json.loads((ROOT/'data/projects.json').read_text())['projects'])
  page.locator('#category').select_option('Research & MSc')
  assert page.locator('article:visible').count()>0
+ responsive_pages=('index.html','projects.html','demo.html','architecture.html','dashboard.html','review.html','execution.html','readiness.html','robotics.html','quant-research.html','automation.html','research-gaps.html','capabilities.html','cran-0091.html')
  for width in (390,768):
   page.set_viewport_size({'width':width,'height':844})
-  for path in ('index.html','projects.html','demo.html','architecture.html','dashboard.html','review.html','execution.html','readiness.html'):
+  for path in responsive_pages:
    page.goto(base+'/'+path)
    assert not page.evaluate('document.documentElement.scrollWidth>window.innerWidth'),(width,path)
  (ROOT/'release').mkdir(exist_ok=True)
  page.goto(base+'/index.html');page.screenshot(path=str(ROOT/'release/mobile.png'),full_page=True)
  page.set_viewport_size({'width':1440,'height':1000});page.screenshot(path=str(ROOT/'release/desktop.png'),full_page=True)
+ page.goto(base+'/dashboard.html');page.screenshot(path=str(ROOT/'release/dashboard-review.png'),full_page=False)
  browser.close()
 server.shutdown()
 assert not errors,errors
-report={'desktop_pages':len(list((ROOT/'site').glob('*.html'))),'mobile_tablet_layout_checks':16,'demo_valid_invalid_malformed':True,'catalogue_search_filter':True,'browser_errors':errors,'csp_enabled':True}
+report={'desktop_pages':len(list((ROOT/'site').glob('*.html'))),'mobile_tablet_layout_checks':len(responsive_pages)*2,'demo_valid_invalid_malformed':True,'catalogue_search_filter':True,'browser_errors':errors,'csp_enabled':True}
 (ROOT/'release/browser-checks.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report))

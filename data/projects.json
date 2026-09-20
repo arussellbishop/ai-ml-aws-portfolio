@@ -1873,7 +1873,7 @@
       "priority": "P2",
       "purpose": "Connect robotics prototypes with reproducible software and hardware experiment evidence.",
       "status": "OFFLINE_POLICY_TESTS_PASSED_HARDWARE_GATES_REMAIN",
-      "evidence": "Inspected E012 implementation, historical experiment report and fresh 13-test offline run. Expanded robotics case study separates Bristol and Cranfield proposal branches.",
+      "evidence": "Inspected E012 implementation, historical experiment report and fresh 13-test offline run. Expanded robotics case study separates Bristol and Cranfield proposal branches. Historical E013 result.json corroborates 4.7419858 FPS, two reacquisitions and acknowledged flight completion; 836 trajectory rows and 45 keyframe records counted. Navigation map availability is false.",
       "result": "13 E012 offline SLAM and reacquisition-policy tests passed on 20 September 2026; no fresh hardware or multi-drone validation.",
       "reviewed_on": "2026-09-20",
       "next_action": "Instrument recorded-video latency/loss and compare confidence policies in simulation; validate each physical claim separately.",
@@ -3169,13 +3169,13 @@
       "category": "Research & MSc",
       "priority": "ACADEMIC",
       "purpose": "Study handwritten-digit classification and sigmoid gradients using TensorFlow notebooks, explanatory notes and evaluation code.",
-      "status": "source inspected rerun pending",
-      "evidence": "MNIST and sigmoid notebooks inspected; sanitized review copies prepared",
-      "result": "Inspected source includes MNIST preprocessing, a dense classifier, a held-out evaluation call, and a sigmoid automatic-versus-numerical gradient comparison. Saved notes are historical; fresh runtime results are not yet recorded.",
+      "status": "CLEAN_CPU_RERUN_PASSED",
+      "evidence": "Both recovered coursework notebooks executed on CPU on 20 September: TensorFlow 2.19.0, NumPy 2.1.3, Keras 3.12.4, seed 42; hashes and run records saved.",
+      "result": "MNIST: 97.5% test accuracy, loss 0.11136, 10,000 held-out test images after ten epochs (48,000 fit / 12,000 validation images). Sigmoid gradient MAE: 0.0000116267.",
       "reviewed_on": "2026-09-20",
-      "next_action": "Run clean TensorFlow sessions and save environment/results",
+      "next_action": "Add multiple seeds, error analysis and a comparison baseline; verify formal coursework submission separately.",
       "completion_gate": "Reviewable code, fresh execution and limitations",
-      "score": 70,
+      "score": 95,
       "gates": [
         {
           "id": "purpose",
@@ -3195,15 +3195,15 @@
           "id": "reproduce",
           "label": "Reproducibility",
           "max": 20,
-          "earned": 5,
-          "evidence": "Review copies and execution instructions prepared; TensorFlow rerun pending."
+          "earned": 20,
+          "evidence": "Both notebooks executed in isolated CPU environment; versions and source/data hashes recorded."
         },
         {
           "id": "evaluate",
           "label": "Evaluation evidence",
           "max": 20,
-          "earned": 5,
-          "evidence": "Evaluation code inspected; historical notebook outputs are not a fresh run."
+          "earned": 15,
+          "evidence": "Fresh held-out MNIST and numerical gradient results; single seed and no wider benchmark."
         },
         {
           "id": "presentation",
@@ -3236,7 +3236,7 @@
           "kind": "Colab notebook",
           "access": "Google permission required; sharing unchanged",
           "project_id": "COLAB-ML",
-          "verified": "Source inspected; not rerun"
+          "verified": "Source inspected; sanitized code rerun locally 20 September 2026"
         },
         {
           "id": "1RBy2yt-jfKP_MFQuVjCTCXw1bBwkawcQ",
@@ -3245,7 +3245,7 @@
           "kind": "Colab notebook",
           "access": "Google permission required; sharing unchanged",
           "project_id": "COLAB-ML",
-          "verified": "Source inspected; not rerun"
+          "verified": "Source inspected; sanitized code rerun locally 20 September 2026"
         }
       ],
       "run_steps": [
@@ -3254,7 +3254,7 @@
         "Record TensorFlow version, outputs and errors; compare held-out results or gradient error with the stated method."
       ],
       "requirements": "Google Colab or Jupyter; TensorFlow, NumPy and Matplotlib. MNIST needs a dataset download.",
-      "limitations": "The recovered coursework copies were inspected and compiled, not freshly trained in this audit. Review copies omit original outputs and personal execution metadata.",
+      "limitations": "One seeded CPU run, not a multi-run generalisation study. Original metadata/outputs removed; fresh results stored separately. No awarded grade is inferred.",
       "submission_status": "Submission receipt / examiner acceptance not verified",
       "authorship": "Work collected in the owner\u2019s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
       "audiences": [

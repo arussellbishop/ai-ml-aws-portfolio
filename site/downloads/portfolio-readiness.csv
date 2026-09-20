@@ -36,7 +36,7 @@ MSC-VISUALISATION,MSc energy data visualisation,40,NOT_INDEPENDENTLY_ESTABLISHED
 MSC-URANIUM,MSc uranium data science,40,NOT_INDEPENDENTLY_ESTABLISHED,"Review methods, results and notebook execution"
 MSC-USB-ASSIGNMENTS,MSc archived assignments,35,NOT_INDEPENDENTLY_ESTABLISHED,Map assignments to modules and remove duplicate references
 MSC-AWS-LAB,MSc AWS cloud migration lab,55,NOT_INDEPENDENTLY_ESTABLISHED,Reconcile final report and redact selected screenshots
-COLAB-ML,Colab neural-network coursework,70,NOT_INDEPENDENTLY_ESTABLISHED,Run clean TensorFlow sessions and save environment/results
+COLAB-ML,Colab neural-network coursework,95,NOT_INDEPENDENTLY_ESTABLISHED,"Add multiple seeds, error analysis and a comparison baseline; verify formal coursework submission separately."
 COLAB-MARKETS,Colab market-regime experiments,50,NOT_INDEPENDENTLY_ESTABLISHED,Freeze inputs; isolate train/test periods; pin dependencies
 MSC-OULAD,OULAD learning-analytics research,40,NOT_INDEPENDENTLY_ESTABLISHED,Resolve research lineage and identify authoritative version
 MSC-DEEP-LEARNING,MSc deep-learning volatility study,40,NOT_INDEPENDENTLY_ESTABLISHED,Inspect report and reconcile notebook/results

@@ -30,7 +30,8 @@
           "title": "What is implemented",
           "paragraphs": [
             "The inspected E012 code uses one frame receiver and decoder, a latest-only shared-frame bus, OpenCV ORB monocular visual odometry and a non-commanding search advisor. The SLAM module has no drone-command interface. Thirteen offline tests passed on 20 September 2026, covering concurrency, bounded storage and target-loss policies.",
-            "Earlier project records contain single-Tello connection and flight evidence. The July E012 report explicitly marks passive SLAM and reacquisition integration partial. Fresh offline tests do not demonstrate flight performance, metric mapping or two physical Tellos."
+            "Earlier project records contain single-Tello connection and flight evidence. The July E012 report explicitly marks passive SLAM and reacquisition integration partial. Fresh offline tests do not demonstrate flight performance, metric mapping or two physical Tellos.",
+            "A later E013 report dated 19 July 2026 records an airborne depth-scheduled following test: acknowledged takeoff/landing, 4.74 FPS effective tracking/control and two confirmed reacquisitions. This is a saved experiment report, not a new flight or an independent remeasurement. It retains an E012 run-ID prefix and explicitly labels ORB visual odometry advisory rather than navigation-grade SLAM."
           ]
         },
         {
@@ -327,7 +328,8 @@
           "title": "Existing work that supports preparation",
           "paragraphs": [
             "Ubuntu/Python Tello perception, telemetry and event logging support experimental engineering. E012 monocular visual odometry and target-loss policies provide an inspected starting point; 13 offline policy tests passed in this portfolio review. HMM temporal evaluation and AIOS provenance offer transferable methods for sequential data and reproducibility.",
-            "These are adjacent capabilities, not proof of completed PNT research. The current monocular output is unscaled; calibrated inertial/radio fusion, navigation ground truth, timing integrity and GNSS-denial validation are not established. Wi-Fi/video degradation is a communication issue and must not be equated with demonstrated GNSS resilience."
+            "These are adjacent capabilities, not proof of completed PNT research. The current monocular output is unscaled; calibrated inertial/radio fusion, navigation ground truth, timing integrity and GNSS-denial validation are not established. Wi-Fi/video degradation is a communication issue and must not be equated with demonstrated GNSS resilience.",
+            "The later E013 historical flight report also supports practical integration experience: depth-scheduled following, event records and advisory visual odometry. It does not supply calibrated radio/inertial fusion or navigation ground truth."
           ]
         },
         {
