@@ -38,7 +38,7 @@ with sync_playwright() as p:
  assert page.locator('article:visible').count()==sum('examiner' in p['audiences'] for p in json.loads((ROOT/'data/projects.json').read_text())['projects'])
  page.locator('#category').select_option('Research & MSc')
  assert page.locator('article:visible').count()>0
- responsive_pages=('index.html','projects.html','demo.html','architecture.html','dashboard.html','review.html','execution.html','readiness.html','robotics.html','quant-research.html','automation.html','research-gaps.html','capabilities.html','cran-0091.html')
+ responsive_pages=('index.html','projects.html','demo.html','architecture.html','dashboard.html','review.html','execution.html','readiness.html','robotics.html','quant-research.html','automation.html','research-gaps.html','capabilities.html','cran-0091.html','integrated-research.html')
  for width in (390,768):
   page.set_viewport_size({'width':width,'height':844})
   for path in responsive_pages:

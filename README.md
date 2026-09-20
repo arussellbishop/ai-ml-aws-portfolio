@@ -1,6 +1,6 @@
 # Russell Bishop — AI engineering and AWS portfolio
 
-The central portfolio contains 66 static pages, 44 public project dossiers, four selected engineering case studies, employer/examiner review routes, transparent readiness scores and an editable synthetic data-quality demo. The private register tracks 46 projects/workstreams. Private administration and original documents are excluded. The demo runs in the browser; the separate Python/S3/Lambda implementation is included for deployment and cloud integration testing.
+The central portfolio contains 67 static pages, 44 public project dossiers, four selected engineering case studies, employer/examiner review routes, transparent readiness scores and an editable synthetic data-quality demo. The private register tracks 46 projects/workstreams. Private administration and original documents are excluded. The demo runs in the browser; the separate Python/S3/Lambda implementation is included for deployment and cloud integration testing.
 
 ## Build and check
 
@@ -74,3 +74,5 @@ These pages are generated from `data/professional.json`. Run `python3 navigation
 
 Repository: https://github.com/arussellbishop/ai-ml-aws-portfolio
 Original private project repositories and academic records are not included.
+
+Integrated research: https://d2ac9c4k7eb96p.cloudfront.net/integrated-research.html

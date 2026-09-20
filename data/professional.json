@@ -2,6 +2,98 @@
   "reviewed_on": "2026-09-20",
   "streams": [
     {
+      "page": "integrated-research.html",
+      "title": "Air Marshal: an integrated research programme",
+      "skill": "AI / ML \u00b7 navigation \u00b7 human\u2013swarm collaboration",
+      "summary": "Combine the owner\u2019s Ubuntu/Tello Air Marshal work with cognitive navigation, human intent, calibrated trust and collective reliability in one coherent research programme.",
+      "state": "Owner-confirmed direction; proposed integration and gap hypotheses, not established novelty.",
+      "flow": [
+        {
+          "name": "SENSE & ESTIMATE",
+          "detail": "Perception, navigation and sensor uncertainty"
+        },
+        {
+          "name": "COORDINATE",
+          "detail": "Air Marshal roles and collective confidence"
+        },
+        {
+          "name": "INTERACT",
+          "detail": "Human intent, explanation and intervention"
+        },
+        {
+          "name": "EVALUATE",
+          "detail": "Shared scenarios, baselines and provenance"
+        }
+      ],
+      "sections": [
+        {
+          "title": "How the research strands fit",
+          "paragraphs": [
+            "Air Marshal is the shared software and experimental platform, grounded in the existing Ubuntu/Tello perception, logging, target-reacquisition and advisory visual-odometry work.",
+            "CRAN-0091: cognitive navigation and multisensor reliability under degraded observations. CRAN-0040: human\u2013swarm collaboration and structured mission interpretation, as mapped in the existing local proposal matrix. CRAN-0041: trust sensing, adaptive autonomy and transparency, as mapped locally. Current official availability and numbering for 0040/0041 remain to be reverified.",
+            "Bristol small-swarm research supplies a collective-behaviour perspective: how confidence, coordination and task allocation change when individual robots or communication links become unreliable. University themes are research references; the programme remains the owner\u2019s proposed synthesis."
+          ]
+        },
+        {
+          "title": "A bounded central research question",
+          "paragraphs": [
+            "How can uncertainty about navigation and communication be propagated through small-team coordination to human-facing explanations and intervention decisions, so that a team remains useful without overstating its reliability?",
+            "The candidate contribution is a testable method for passing calibrated reliability information between these layers. Combining existing technologies is not sufficient to establish novelty. Compare against end-to-end prior art and demonstrate which coupling changes outcomes.",
+            "For a CRAN-0091-led proposal, choose navigation reliability as the primary contribution; use Air Marshal coordination and operator interaction as evaluation context. A 0040-led version can instead centre mission interpretation, while a 0041-led version centres trust calibration. This preserves one programme without promising three doctoral theses at once."
+          ]
+        },
+        {
+          "title": "Gap hypotheses and disconfirming evidence",
+          "paragraphs": [
+            "G1 \u2014 Navigation-to-team confidence: test whether dependence-aware sensor confidence improves coordination under correlated errors. Compare independent confidence, simple averaging and a belief-propagation baseline; reject the hypothesis if gains disappear after matching communication and compute budgets.",
+            "G2 \u2014 Human intent under uncertainty: test whether structured mission interpretation with clarification reduces invalid or ungrounded plans relative to an unconstrained language interface and a deterministic command menu. First evaluate on offline annotated tasks.",
+            "G3 \u2014 Trust and intervention: test whether calibrated explanations improve appropriate intervention compared with a fixed-status display. This requires a separate human-study design, validated measures and appropriate institutional review before participant research.",
+            "G4 \u2014 Integrated benefit: compare navigation-only, coordination-only and coupled variants using identical frozen scenarios. Measure estimation error, confidence calibration, task completion, recovery time, message budget and latency. Integration that adds complexity without a measurable benefit is a negative result to retain."
+          ]
+        },
+        {
+          "title": "Staged experimental plan",
+          "paragraphs": [
+            "Stage 1: catalogue current code, datasets and historical evidence; retain the 13 offline policy tests and the separately labelled July E013 flight record. The existing synthetic navigation baseline is preparation, not calibrated multisensor validation.",
+            "Stage 2: build a replay harness with independent truth, synchronized observations and seeded missing/bias/delay conditions. Add classical fusion and deterministic coordination baselines before learned reliability estimation.",
+            "Stage 3: add structured mission requests and a policy validator. Language-model output proposes plans; a separate validator and human oversight govern transitions. Record clarification, rejection and failure cases.",
+            "Stage 4: compare coupled and uncoupled variants with held-out scenarios, ablations and uncertainty estimates. Move to suitable calibrated hardware only after simulation/replay results and an explicit experimental plan.",
+            "AIOS/RRIS can organise queries, source provenance, deduplication and experiment records. AWS presents curated evidence and can later host offline analysis; latency-sensitive robotics remains at the edge. Financial research contributes temporal-validation discipline, not evidence that a robotics method works."
+          ]
+        },
+        {
+          "title": "Prior-art search and evidence gates",
+          "paragraphs": [
+            "Search intersections as well as individual topics: uncertainty-aware human\u2013swarm interaction; sensor-fusion confidence in multi-robot task allocation; correlated sensing errors and collective decision-making; trust calibration under degraded navigation; LLM mission planning with uncertainty and clarification.",
+            "Use AirSwarm, Bristol collective-ranking work and human\u2013robot trust/mission-planning research as starting points. Track full-text inclusion, exact methods, datasets, comparison baselines and reasons for exclusion. The existing targeted refresh is not a complete systematic search.",
+            "Keep a claim-to-source matrix with support, contradiction and untested status. Promote a gap only after competing work has been examined and a feasible discriminating experiment specified. No evidence-readiness score is increased merely by combining the themes."
+          ]
+        }
+      ],
+      "links": [
+        {
+          "title": "CRAN-0091 navigation strand",
+          "url": "cran-0091.html"
+        },
+        {
+          "title": "Air Marshal implementation evidence",
+          "url": "robotics.html"
+        },
+        {
+          "title": "Research-gap methods and sources",
+          "url": "research-gaps.html"
+        },
+        {
+          "title": "AIOS and automation",
+          "url": "automation.html"
+        },
+        {
+          "title": "Official CRAN-0091 brief",
+          "url": "https://www.cranfield.ac.uk/research/phd/ubiquitous-cognitive-navigation-with-ai-based-systems-phd"
+        }
+      ]
+    },
+    {
       "page": "robotics.html",
       "title": "Air Marshal: Ubuntu and Tello robotics",
       "skill": "Computer vision / concurrency / experimental design",
@@ -49,9 +141,19 @@
             "Bristol\u2019s current university profile supports Edmund Hunt\u2019s small-team swarm research relevance. AirSwarm already addresses low-cost multi-UAV coordination, so using Tellos is not itself a novelty claim. An August 2026 Bristol preprint on collective ranking supplies a newer comparator for belief aggregation.",
             "The Cranfield reference-number opportunities were not reverified on an accessible official current call page. Preserve the research ideas, but verify the call and supervisor before an application."
           ]
+        },
+        {
+          "title": "One integrated programme",
+          "paragraphs": [
+            "Air Marshal is the unifying experimental platform. CRAN-0091 contributes navigation and sensor reliability; the locally recorded CRAN-0040 and CRAN-0041 branches contribute human\u2013swarm mission interpretation and trust-adaptive autonomy. Bristol adds collective reliability and small-team coordination. These strands share experiments and provenance while retaining distinct research questions."
+          ]
         }
       ],
       "links": [
+        {
+          "title": "Integrated Air Marshal research programme",
+          "url": "integrated-research.html"
+        },
         {
           "title": "Drone project evidence dossier",
           "url": "work-drones.html"
@@ -268,6 +370,10 @@
       ],
       "links": [
         {
+          "title": "Integrated Air Marshal research programme",
+          "url": "integrated-research.html"
+        },
+        {
           "title": "Gap-search workstream",
           "url": "work-phd-gaps.html"
         },
@@ -298,7 +404,7 @@
       "title": "CRAN-0091: cognitive navigation research",
       "skill": "Sensor fusion / uncertainty / resilient navigation",
       "summary": "A focused bridge from the Ubuntu/Tello lab to a proposed study of sensor reliability and navigation under degraded observations.",
-      "state": "Official project brief checked; local statement mismatch identified; new synthetic baseline executed.",
+      "state": "Navigation strand within the owner\u2019s integrated Air Marshal research programme; synthetic baseline executed.",
       "flow": [
         {
           "name": "OBSERVE",
@@ -335,8 +441,8 @@
         {
           "title": "Proposal alignment and document lineage",
           "paragraphs": [
-            "The existing application folder contains a personal statement for LLM human\u2013swarm collaboration, while an archived navigation-focused draft also exists. Preserve both, but label their purposes correctly. A new navigation alignment brief is prepared separately; the previously submitted version and portal state are not changed.",
-            "Candidate research question: can reliability-aware sensor selection improve estimation accuracy and recovery under missing, biased and delayed observations while maintaining calibrated uncertainty? Start with robust statistical fusion; compare a learned reliability estimator only after a frozen data split and a justified baseline. This is a proposal hypothesis, not an established gap."
+            "The owner confirms that the statement intentionally combines personal Air Marshal interests with Cranfield navigation, human\u2013swarm collaboration and trust-adaptive autonomy themes. The previous interpretation as an accidental mismatch is superseded. Original documents are preserved.",
+            "CRAN-0091 provides the cognitive-navigation emphasis within a wider programme. A call-specific proposal should explain this connection explicitly, identify a bounded primary contribution, and distinguish demonstrated capabilities from proposed integration."
           ]
         },
         {
@@ -356,6 +462,10 @@
         }
       ],
       "links": [
+        {
+          "title": "Integrated Air Marshal research programme",
+          "url": "integrated-research.html"
+        },
         {
           "title": "Official Cranfield CRAN-0091 brief",
           "url": "https://www.cranfield.ac.uk/research/phd/ubiquitous-cognitive-navigation-with-ai-based-systems-phd"
