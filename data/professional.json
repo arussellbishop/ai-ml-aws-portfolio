@@ -320,6 +320,49 @@
       ]
     },
     {
+      "page": "rag-agents.html",
+      "title": "NotebookLM, hybrid RAG and governed AI agents",
+      "skill": "Evidence retrieval / agent governance / provenance",
+      "summary": "A local evidence pipeline combines NotebookLM source preparation, vector retrieval, graph relationships and advice-only agents. The AWS page is a reviewed demonstration of the design and measured runs; it is not presented as a live autonomous control plane.",
+      "state": "Local retrieval runs PASS; graph layer PASS_WITH_WARNINGS; agentic layer advice-only; NotebookLM source/index workflow found in Drive; continuous refresh and public API deployment remain future work.",
+      "flow": [
+        {"name": "COLLECT", "detail": "Drive, ChatGPT history and project evidence"},
+        {"name": "INDEX", "detail": "FTS5/TF-IDF chunks plus graph entities and links"},
+        {"name": "RETRIEVE", "detail": "Query results with sensitivity and provenance metadata"},
+        {"name": "ADVISE", "detail": "Agent recommendations held for human review"},
+        {"name": "PUBLISH", "detail": "Curated snapshot to the AWS portfolio"}
+      ],
+      "sections": [
+        {
+          "title": "Measured local work",
+          "paragraphs": [
+            "The local vector RAG run ingested 218 documents into an FTS5/TF-IDF index, produced 219 chunks, and averaged 8.2 results across five test queries covering learning analytics, GPS-denied drones, the MSc metals work, actions and PhD research. The run reports PASS and records that no Drive bodies, Gmail bodies or OpenAI calls were read.",
+            "The graph layer contains 1,183 nodes and 3,095 edges, with project, topic, action and candidate-retrieval relationships. It reports PASS_WITH_WARNINGS because the graph is metadata-led and the Drive/Gmail bodies were not downloaded. The history-ingestion evidence records 47 conversations, 423 messages, 157 project links and 76 extracted actions."
+          ]
+        },
+        {
+          "title": "NotebookLM and agent boundary",
+          "paragraphs": [
+            "Drive contains NotebookLM staging folders, index queues, source packs and an MSc OULAD source brief. These are useful evidence-pack and research-notebook artefacts: they show source curation and hand-off into NotebookLM, not a continuously refreshed NotebookLM service owned by this portfolio.",
+            "Agentic RAG produces review recommendations only. The Four-C governance rules prohibit external writes, finance orders, drone commands and submissions; retrieved text is treated as untrusted evidence and outputs remain provisional until a human promotes them."
+          ]
+        },
+        {
+          "title": "Hybrid architecture to complete",
+          "paragraphs": [
+            "The next production-shaped step is a reproducible hybrid path: versioned source snapshots, a lexical/vector index, a graph projection for relationships, reranking with citations, freshness and sensitivity checks, then an approval queue. A scheduled refresh, independent restore check, evaluation set and public API are still required before calling this a live cloud service.",
+            "This separation lets the same evidence support the Air Marshal/CRAN research programme, the MSc learning-analytics work, financial research and the AIOS operating model without implying that historical logs are current autonomous operation."
+          ]
+        }
+      ],
+      "links": [
+        {"title": "AIOS dossier", "url": "work-aios-core.html"},
+        {"title": "Four-C agents dossier", "url": "work-project-ed3aa8ddd9a6.html"},
+        {"title": "Research gaps and evidence", "url": "research-gaps.html"},
+        {"title": "AWS deployed architecture", "url": "architecture.html"}
+      ]
+    },
+    {
       "page": "research-gaps.html",
       "title": "Research gaps: sources, hypotheses and tests",
       "skill": "Literature review / research design / critical evaluation",
