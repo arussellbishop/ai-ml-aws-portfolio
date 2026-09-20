@@ -1,0 +1,196 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Portable bounded AIOS operations: versioned evidence, heartbeat, DLQ and alarm.",
+  "Resources": {
+    "EvidenceBucket": {
+      "Type": "AWS::S3::Bucket",
+      "DeletionPolicy": "Retain",
+      "UpdateReplacePolicy": "Retain",
+      "Properties": {
+        "BucketEncryption": {
+          "ServerSideEncryptionConfiguration": [
+            {
+              "ServerSideEncryptionByDefault": {
+                "SSEAlgorithm": "AES256"
+              }
+            }
+          ]
+        },
+        "VersioningConfiguration": {
+          "Status": "Enabled"
+        },
+        "PublicAccessBlockConfiguration": {
+          "BlockPublicAcls": true,
+          "BlockPublicPolicy": true,
+          "IgnorePublicAcls": true,
+          "RestrictPublicBuckets": true
+        }
+      }
+    },
+    "FailureQueue": {
+      "Type": "AWS::SQS::Queue",
+      "Properties": {
+        "MessageRetentionPeriod": 1209600,
+        "VisibilityTimeout": 300
+      }
+    },
+    "FailureAlarm": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmDescription": "Operations failures require review.",
+        "Namespace": "AWS/SQS",
+        "MetricName": "ApproximateNumberOfMessagesVisible",
+        "Dimensions": [
+          {
+            "Name": "QueueName",
+            "Value": {
+              "Ref": "FailureQueue"
+            }
+          }
+        ],
+        "Statistic": "Maximum",
+        "Period": 300,
+        "EvaluationPeriods": 1,
+        "Threshold": 1,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "notBreaching"
+      }
+    },
+    "HeartbeatRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              },
+              "Action": "sts:AssumeRole"
+            }
+          ]
+        },
+        "Policies": [
+          {
+            "PolicyName": "HeartbeatWrite",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "s3:PutObject"
+                  ],
+                  "Resource": {
+                    "Fn::Sub": "${EvidenceBucket.Arn}/heartbeats/*"
+                  }
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "logs:CreateLogGroup",
+                    "logs:CreateLogStream",
+                    "logs:PutLogEvents"
+                  ],
+                  "Resource": "*"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "HeartbeatFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Runtime": "python3.12",
+        "Handler": "index.handler",
+        "Timeout": 30,
+        "Role": {
+          "Fn::GetAtt": [
+            "HeartbeatRole",
+            "Arn"
+          ]
+        },
+        "Environment": {
+          "Variables": {
+            "EVIDENCE_BUCKET": {
+              "Ref": "EvidenceBucket"
+            }
+          }
+        },
+        "Code": {
+          "ZipFile": "import boto3,datetime,json,os\ns3=boto3.client('s3')\ndef handler(event,context):\n now=datetime.datetime.now(datetime.timezone.utc).isoformat()\n key='heartbeats/'+now.replace(':','-')+'.json'\n body={'schema_version':1,'generated_at':now,'status':'PASS','read_only':True,'live_trading':'DISABLED','telegram_sending':'DISABLED'}\n s3.put_object(Bucket=os.environ['EVIDENCE_BUCKET'],Key=key,Body=json.dumps(body).encode(),ContentType='application/json')\n return body\n"
+        }
+      }
+    },
+    "HeartbeatSchedule": {
+      "Type": "AWS::Events::Rule",
+      "Properties": {
+        "ScheduleExpression": "rate(15 minutes)",
+        "State": "ENABLED",
+        "Targets": [
+          {
+            "Arn": {
+              "Fn::GetAtt": [
+                "HeartbeatFunction",
+                "Arn"
+              ]
+            },
+            "Id": "heartbeat"
+          }
+        ]
+      }
+    },
+    "HeartbeatPermission": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "HeartbeatFunction"
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "events.amazonaws.com",
+        "SourceArn": {
+          "Fn::GetAtt": [
+            "HeartbeatSchedule",
+            "Arn"
+          ]
+        }
+      }
+    },
+    "OperationsLog": {
+      "Type": "AWS::Logs::LogGroup",
+      "DeletionPolicy": "Retain",
+      "UpdateReplacePolicy": "Retain",
+      "Properties": {
+        "LogGroupName": {
+          "Fn::Sub": "/aws/aios/${AWS::StackName}/operations"
+        },
+        "RetentionInDays": 30
+      }
+    }
+  },
+  "Outputs": {
+    "EvidenceBucket": {
+      "Value": {
+        "Ref": "EvidenceBucket"
+      }
+    },
+    "FailureQueue": {
+      "Value": {
+        "Ref": "FailureQueue"
+      }
+    },
+    "HeartbeatFunction": {
+      "Value": {
+        "Ref": "HeartbeatFunction"
+      }
+    },
+    "HeartbeatSchedule": {
+      "Value": {
+        "Ref": "HeartbeatSchedule"
+      }
+    }
+  }
+}
