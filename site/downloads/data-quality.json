@@ -1,0 +1,290 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Resources": {
+    "Output": {
+      "Type": "AWS::S3::Bucket",
+      "DeletionPolicy": "Retain",
+      "UpdateReplacePolicy": "Retain",
+      "Properties": {
+        "PublicAccessBlockConfiguration": {
+          "BlockPublicAcls": true,
+          "IgnorePublicAcls": true,
+          "BlockPublicPolicy": true,
+          "RestrictPublicBuckets": true
+        },
+        "VersioningConfiguration": {
+          "Status": "Enabled"
+        },
+        "BucketEncryption": {
+          "ServerSideEncryptionConfiguration": [
+            {
+              "ServerSideEncryptionByDefault": {
+                "SSEAlgorithm": "AES256"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "Logs": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": {
+          "Fn::Sub": "/aws/lambda/${AWS::StackName}-quality"
+        },
+        "RetentionInDays": 7
+      }
+    },
+    "Role": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              },
+              "Action": "sts:AssumeRole"
+            }
+          ]
+        },
+        "Policies": [
+          {
+            "PolicyName": "DataQuality",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "s3:GetObject",
+                    "s3:GetObjectVersion"
+                  ],
+                  "Resource": {
+                    "Fn::Sub": "arn:${AWS::Partition}:s3:::${AWS::StackName}-${AWS::AccountId}-${AWS::Region}-in/incoming/*"
+                  }
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": "s3:PutObject",
+                  "Resource": {
+                    "Fn::Sub": "${Output.Arn}/results/*"
+                  }
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "logs:CreateLogStream",
+                    "logs:PutLogEvents"
+                  ],
+                  "Resource": {
+                    "Fn::GetAtt": [
+                      "Logs",
+                      "Arn"
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "Function": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "FunctionName": {
+          "Fn::Sub": "${AWS::StackName}-quality"
+        },
+        "Runtime": "python3.12",
+        "Handler": "index.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "Role",
+            "Arn"
+          ]
+        },
+        "MemorySize": 128,
+        "Timeout": 15,
+        "Environment": {
+          "Variables": {
+            "INPUT_BUCKET": {
+              "Fn::Sub": "${AWS::StackName}-${AWS::AccountId}-${AWS::Region}-in"
+            },
+            "OUTPUT_BUCKET": {
+              "Ref": "Output"
+            }
+          }
+        },
+        "Code": {
+          "ZipFile": "\"\"\"Bounded financial-data quality demonstration; no trading recommendations.\"\"\"\nimport hashlib\nimport json\nimport math\nimport os\nfrom datetime import date\nfrom urllib.parse import unquote_plus\n\nMAX_BYTES = 262144\n\ndef validate(payload):\n    if not isinstance(payload, dict) or not isinstance(payload.get('rows'), list):\n        raise ValueError('Expected an object containing rows')\n    rows = payload['rows']\n    if not 1 <= len(rows) <= 1000:\n        raise ValueError('Expected 1\u20131000 rows')\n    as_of = date.fromisoformat(payload['as_of'])\n    seen, issues = set(), []\n    for index, row in enumerate(rows):\n        errors = []\n        if not isinstance(row, dict):\n            issues.append({'row': index, 'codes': ['invalid_row']})\n            continue\n        asset = row.get('asset')\n        if not isinstance(asset, str) or not asset.strip() or len(asset) > 32:\n            errors.append('invalid_asset')\n        value = row.get('close')\n        if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value) or value <= 0:\n            errors.append('invalid_close')\n        try:\n            observed = date.fromisoformat(row['date'])\n            acquired = date.fromisoformat(row['acquired_on'])\n            if observed > acquired or acquired > as_of:\n                errors.append('invalid_temporal_order')\n            if isinstance(asset, str):\n                key = (asset, observed)\n                if key in seen:\n                    errors.append('duplicate_asset_date')\n                seen.add(key)\n        except (KeyError, TypeError, ValueError):\n            errors.append('invalid_date')\n        if errors:\n            issues.append({'row': index, 'codes': errors})\n    return {'schema_version': 1, 'as_of': as_of.isoformat(), 'rows': len(rows),\n            'valid_rows': len(rows) - len(issues), 'issues': issues,\n            'status': 'PASS' if not issues else 'FAIL'}\n\ndef process(event, client):\n    results = []\n    for record in event.get('Records', []):\n        source = record.get('s3', {})\n        obj = source.get('object', {})\n        key = unquote_plus(obj.get('key', ''))\n        bucket = source.get('bucket', {}).get('name')\n        if (record.get('eventSource') != 'aws:s3' or\n            not record.get('eventName', '').startswith('ObjectCreated:') or\n            bucket != os.environ['INPUT_BUCKET'] or\n            not key.startswith('incoming/') or not key.endswith('.json')):\n            raise ValueError('Unexpected event source or object')\n        version = obj.get('versionId')\n        if not version:\n            raise ValueError('Versioned object required')\n        response = client.get_object(Bucket=bucket, Key=key, VersionId=version)\n        stream = response['Body']\n        try:\n            body = stream.read(MAX_BYTES + 1)\n        finally:\n            stream.close()\n        if len(body) > MAX_BYTES:\n            raise ValueError('Object exceeds size limit')\n        result = validate(json.loads(body))\n        digest = hashlib.sha256(json.dumps([bucket, key, version]).encode()).hexdigest()\n        output = 'results/' + digest + '.json'\n        client.put_object(Bucket=os.environ['OUTPUT_BUCKET'], Key=output,\n                          Body=json.dumps(result, allow_nan=False).encode(),\n                          ContentType='application/json')\n        results.append(output)\n    return {'outputs': results}\n\ndef handler(event, context):\n    import boto3\n    return process(event, boto3.client('s3'))\n"
+        }
+      }
+    },
+    "InvokePermission": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "Function"
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "s3.amazonaws.com",
+        "SourceAccount": {
+          "Ref": "AWS::AccountId"
+        },
+        "SourceArn": {
+          "Fn::Sub": "arn:${AWS::Partition}:s3:::${AWS::StackName}-${AWS::AccountId}-${AWS::Region}-in"
+        }
+      }
+    },
+    "Input": {
+      "Type": "AWS::S3::Bucket",
+      "DependsOn": "InvokePermission",
+      "DeletionPolicy": "Retain",
+      "UpdateReplacePolicy": "Retain",
+      "Properties": {
+        "PublicAccessBlockConfiguration": {
+          "BlockPublicAcls": true,
+          "IgnorePublicAcls": true,
+          "BlockPublicPolicy": true,
+          "RestrictPublicBuckets": true
+        },
+        "VersioningConfiguration": {
+          "Status": "Enabled"
+        },
+        "BucketEncryption": {
+          "ServerSideEncryptionConfiguration": [
+            {
+              "ServerSideEncryptionByDefault": {
+                "SSEAlgorithm": "AES256"
+              }
+            }
+          ]
+        },
+        "BucketName": {
+          "Fn::Sub": "${AWS::StackName}-${AWS::AccountId}-${AWS::Region}-in"
+        },
+        "NotificationConfiguration": {
+          "LambdaConfigurations": [
+            {
+              "Event": "s3:ObjectCreated:*",
+              "Function": {
+                "Fn::GetAtt": [
+                  "Function",
+                  "Arn"
+                ]
+              },
+              "Filter": {
+                "S3Key": {
+                  "Rules": [
+                    {
+                      "Name": "prefix",
+                      "Value": "incoming/"
+                    },
+                    {
+                      "Name": "suffix",
+                      "Value": ".json"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "AsyncPolicy": {
+      "Type": "AWS::Lambda::EventInvokeConfig",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "Function"
+        },
+        "Qualifier": "$LATEST",
+        "MaximumRetryAttempts": 0,
+        "MaximumEventAgeInSeconds": 60
+      }
+    },
+    "InputTLS": {
+      "Type": "AWS::S3::BucketPolicy",
+      "Properties": {
+        "Bucket": {
+          "Ref": "Input"
+        },
+        "PolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Deny",
+              "Principal": "*",
+              "Action": "s3:*",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "Input",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Fn::Sub": "${Input.Arn}/*"
+                }
+              ],
+              "Condition": {
+                "Bool": {
+                  "aws:SecureTransport": "false"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "OutputTLS": {
+      "Type": "AWS::S3::BucketPolicy",
+      "Properties": {
+        "Bucket": {
+          "Ref": "Output"
+        },
+        "PolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Deny",
+              "Principal": "*",
+              "Action": "s3:*",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "Output",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Fn::Sub": "${Output.Arn}/*"
+                }
+              ],
+              "Condition": {
+                "Bool": {
+                  "aws:SecureTransport": "false"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "Outputs": {
+    "InputBucket": {
+      "Value": {
+        "Ref": "Input"
+      }
+    },
+    "OutputBucket": {
+      "Value": {
+        "Ref": "Output"
+      }
+    }
+  }
+}

@@ -1,0 +1,3914 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-09-20",
+  "score_name": "Portfolio evidence readiness",
+  "score_explanation": "Evidence-weighted rubric, not estimated project completion. Unknown or unverified work earns no credit in that gate. A low score can mean missing review evidence rather than little work done. Partial credit is explained per gate.",
+  "criteria": [
+    {
+      "id": "purpose",
+      "max": 10,
+      "label": "Purpose and scope"
+    },
+    {
+      "id": "artifact",
+      "max": 20,
+      "label": "Implementation or research artifact"
+    },
+    {
+      "id": "reproduce",
+      "max": 20,
+      "label": "Reproducibility"
+    },
+    {
+      "id": "evaluate",
+      "max": 20,
+      "label": "Evaluation evidence"
+    },
+    {
+      "id": "presentation",
+      "max": 15,
+      "label": "Review package"
+    },
+    {
+      "id": "access",
+      "max": 10,
+      "label": "Reviewer access"
+    },
+    {
+      "id": "limits",
+      "max": 5,
+      "label": "Limitations and next step"
+    }
+  ],
+  "projects": [
+    {
+      "id": "AIVOUCH",
+      "name": "AIVouch",
+      "category": "Applications & cloud",
+      "priority": "P1",
+      "purpose": "Help a business inspect how AI answer engines describe it, preserve scan evidence, and organise reviewed fixes and follow-up checks.",
+      "status": "local validation passed cloud unverified",
+      "evidence": "30 tests; mobile validation; local smoke; frozen baseline restored",
+      "result": "30 tests; mobile validation; local smoke; frozen baseline restored This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Verify cloud health; define evaluation set",
+      "completion_gate": "Portfolio v1 demo plus deployment/evaluation/recovery evidence",
+      "score": 80,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 20,
+          "evidence": "Source content inspected."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 15,
+          "evidence": "Local backend and concurrent isolated suites passed; whole live service not revalidated."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 15,
+          "evidence": "Thirty backend tests plus mobile checks passed; AI-quality evaluation pending."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 15,
+          "evidence": "Detailed case study with supporting source links/downloads."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 0,
+          "evidence": "Original artifacts remain local or access has not been established."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Use the preserved product-v1 source and README.",
+        "Run the backend suite with an isolated test database; inspect the mobile type check and API URL guard.",
+        "Use demo mode for review; verify cloud configuration separately."
+      ],
+      "requirements": "Python backend environment, Node/mobile dependencies; credentials only for live providers.",
+      "limitations": "Do not treat local tests as evidence of current live AI quality or uptime.",
+      "submission_status": "Not an academic submission claim",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer"
+      ],
+      "platforms": [
+        "Local source"
+      ]
+    },
+    {
+      "id": "AWS-PORTFOLIO",
+      "name": "AWS and public job portfolio",
+      "category": "Applications & cloud",
+      "priority": "P1",
+      "purpose": "Present engineering work through a reproducible, independently hosted AWS portfolio with a bounded data-quality demonstration.",
+      "status": "aws website live verified",
+      "evidence": "S3 and CloudFront website verified live 20 September; separate Lambda pipeline not deployed",
+      "result": "S3 and CloudFront website verified live 20 September; separate Lambda pipeline not deployed This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Deploy and evaluate the separate data pipeline; tailor portfolio to job applications",
+      "completion_gate": "Reproducible cloud deployment and reviewed public case studies",
+      "score": 100,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 20,
+          "evidence": "Source content inspected."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 20,
+          "evidence": "Source bundle restored and rebuilt in a clean directory; public website verified."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 20,
+          "evidence": "Seven validator tests and live website/browser/security checks passed."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 15,
+          "evidence": "Detailed case study with supporting source links/downloads."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Public runnable or downloadable demonstration."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Download the source bundle and unzip it in a clean directory.",
+        "Run python3 -m unittest discover -s tests -v.",
+        "Open demo.html for the browser exercise; inspect the CloudFormation templates separately."
+      ],
+      "requirements": "Python 3; browser; AWS CLI only for an authorised deployment.",
+      "limitations": "Browser sample runs without credentials. The separate Lambda pipeline is not cloud-deployed.",
+      "submission_status": "Not an academic submission claim",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer"
+      ],
+      "platforms": [
+        "AWS",
+        "Python",
+        "Browser"
+      ]
+    },
+    {
+      "id": "PROJECT-106965784f2d",
+      "name": "MSc dissertation",
+      "category": "Research & MSc",
+      "priority": "ACADEMIC",
+      "purpose": "Investigate interpretable gold/silver market states using hidden Markov models, common-window baselines and a clearly limited SHAP surrogate.",
+      "status": "revision planned baseline preserved",
+      "evidence": "Legacy register frozen; latest user requests supervisor-reference revision",
+      "result": "The recorded technical reconciliation reports two clean replays and 53 supported claims. It also corrects any implication that HMM beats buy-and-hold gold in the like-for-like comparison. A later document audit still reports narrative and administrative gaps.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Obtain new references and reconcile checklist before editing frozen deliverables",
+      "completion_gate": "Authoritative reviewed DOCX/PDF with claims and formatting evidence",
+      "score": 65,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 20,
+          "evidence": "Source content inspected."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Saved reconciliation reports two clean replays; not rerun in this review."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Saved metric/claim audit inspected; later document readiness remains incomplete."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 0,
+          "evidence": "Original artifacts remain local or access has not been established."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Read the technical reconciliation and the later document audit separately.",
+        "Use the recorded clean replay procedure and frozen inputs; compare numeric content rather than row ordering.",
+        "Resolve document placeholders, references and final PDF review before asserting submission readiness."
+      ],
+      "requirements": "Frozen HMM study environment and dataset; access to private source/evidence package.",
+      "limitations": "Historical replay is documented, not rerun today. The later document audit says NOT_SUPERVISOR_READY. Submission acceptance is unverified.",
+      "submission_status": "Submission receipt / examiner acceptance not verified",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer",
+        "examiner"
+      ],
+      "platforms": [
+        "Local source"
+      ]
+    },
+    {
+      "id": "PHD-FINLAND",
+      "name": "Finland PhD",
+      "category": "Research & MSc",
+      "priority": "ACADEMIC",
+      "purpose": "Develop an evidence-linked proposal on contestable AI and test its fit with a feasible doctoral research programme.",
+      "status": "requires current review",
+      "evidence": "Proposal stage located",
+      "result": "Proposal stage located This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Revalidate gap and institution fit",
+      "completion_gate": "Evidence-backed proposal and submission checklist",
+      "score": 35,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 0,
+          "evidence": "Original artifacts remain local or access has not been established."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Revalidate gap and institution fit",
+      "submission_status": "Submission receipt / examiner acceptance not verified",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer",
+        "examiner"
+      ],
+      "platforms": [
+        "Local source"
+      ]
+    },
+    {
+      "id": "PROJECT-e72cefcfc818",
+      "name": "Education/privacy PhD",
+      "category": "Research & MSc",
+      "priority": "ACADEMIC",
+      "purpose": "Investigate educational AI and privacy, with a defensible question, data access and evaluation design.",
+      "status": "requires current review",
+      "evidence": "Existing canonical project ID retained",
+      "result": "Existing canonical project ID retained This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Refresh primary literature and feasibility",
+      "completion_gate": "Defensible gap; methods; access/ethics and proposal",
+      "score": 35,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 0,
+          "evidence": "Original artifacts remain local or access has not been established."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Refresh primary literature and feasibility",
+      "submission_status": "Submission receipt / examiner acceptance not verified",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer",
+        "examiner"
+      ],
+      "platforms": [
+        "Local source"
+      ]
+    },
+    {
+      "id": "PROJECT-5b716a4bac51",
+      "name": "Drone PhD",
+      "category": "Research & MSc",
+      "priority": "ACADEMIC",
+      "purpose": "Develop a feasible doctoral study around drone systems and experiments whose claims can be tied to measured evidence.",
+      "status": "requires current review",
+      "evidence": "Existing canonical project ID retained",
+      "result": "Existing canonical project ID retained This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Link research claims to experiment evidence",
+      "completion_gate": "Proposal with feasible hardware experiments",
+      "score": 35,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 0,
+          "evidence": "Original artifacts remain local or access has not been established."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Link research claims to experiment evidence",
+      "submission_status": "Submission receipt / examiner acceptance not verified",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer",
+        "examiner"
+      ],
+      "platforms": [
+        "Local source"
+      ]
+    },
+    {
+      "id": "PROJECT-eeb3ce3babff",
+      "name": "Financial crime/AML PhD",
+      "category": "Research & MSc",
+      "priority": "ACADEMIC",
+      "purpose": "Explore financial-crime and AML research questions with explicit data-access and validation constraints.",
+      "status": "requires current review",
+      "evidence": "Concept/evidence incomplete in legacy register",
+      "result": "Concept/evidence incomplete in legacy register This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Audit data access and research gap",
+      "completion_gate": "Defensible question, baseline and method",
+      "score": 35,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 0,
+          "evidence": "Original artifacts remain local or access has not been established."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Audit data access and research gap",
+      "submission_status": "Submission receipt / examiner acceptance not verified",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer",
+        "examiner"
+      ],
+      "platforms": [
+        "Local source"
+      ]
+    },
+    {
+      "id": "PHD-GAPS",
+      "name": "Cross-proposal gap search",
+      "category": "Research & MSc",
+      "priority": "ACADEMIC",
+      "purpose": "Compare proposed research gaps against primary literature and distinguish a promising idea from a demonstrated contribution.",
+      "status": "current search not started",
+      "evidence": "Factory and proposal stages located; not a current systematic review",
+      "result": "Factory and proposal stages located; not a current systematic review This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Create query/inclusion and claim-evidence matrices",
+      "completion_gate": "Verified literature and explicit novelty/feasibility assessment",
+      "score": 35,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 0,
+          "evidence": "Original artifacts remain local or access has not been established."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Create query/inclusion and claim-evidence matrices",
+      "submission_status": "Submission receipt / examiner acceptance not verified",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer",
+        "examiner"
+      ],
+      "platforms": [
+        "Local source"
+      ]
+    },
+    {
+      "id": "PHD-FACTORY",
+      "name": "PhD proposal factory",
+      "category": "Research & MSc",
+      "priority": "P2",
+      "purpose": "Organise proposal production so research questions, methods, evidence and readiness checks remain traceable.",
+      "status": "requires current review",
+      "evidence": "Historical production files present",
+      "result": "Historical production files present This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Verify readiness gates and source provenance",
+      "completion_gate": "Unsupported readiness rejected and outputs reproducible",
+      "score": 35,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 0,
+          "evidence": "Original artifacts remain local or access has not been established."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Verify readiness gates and source provenance",
+      "submission_status": "Submission receipt / examiner acceptance not verified",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer",
+        "examiner"
+      ],
+      "platforms": [
+        "Local source"
+      ]
+    },
+    {
+      "id": "RESEARCH-SCANNER",
+      "name": "RRIS research scanner",
+      "category": "Research & MSc",
+      "priority": "P2",
+      "purpose": "Collect and organise research sources for repeatable literature discovery and claim checking.",
+      "status": "requires current review",
+      "evidence": "Legacy register located",
+      "result": "Legacy register located This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Check scanner freshness and citations",
+      "completion_gate": "Repeatable search and source provenance",
+      "score": 35,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 0,
+          "evidence": "Original artifacts remain local or access has not been established."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Check scanner freshness and citations",
+      "submission_status": "Submission receipt / examiner acceptance not verified",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer",
+        "examiner"
+      ],
+      "platforms": [
+        "Local source"
+      ]
+    },
+    {
+      "id": "AIOS-CORE",
+      "name": "AI OS core",
+      "category": "Agents & automation",
+      "priority": "P1",
+      "purpose": "Coordinate project state, scheduled work and evidence through a local operational command dashboard.",
+      "status": "local operation recently verified",
+      "evidence": "Dashboard HTTP 200 and central cycle success in preceding session check",
+      "result": "Dashboard HTTP 200 and central cycle success in preceding session check This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Reconcile generated status against fresh evidence",
+      "completion_gate": "Accurate private remote dashboard and recovery",
+      "score": 40,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 5,
+          "evidence": "Prior session observed dashboard HTTP 200 and a central-cycle success."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 0,
+          "evidence": "Original artifacts remain local or access has not been established."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Reconcile generated status against fresh evidence",
+      "submission_status": "Not an academic submission claim",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer"
+      ],
+      "platforms": [
+        "Local source"
+      ]
+    },
+    {
+      "id": "PROJECT-ed3aa8ddd9a6",
+      "name": "Four-C governed agents",
+      "category": "Agents & automation",
+      "priority": "P1",
+      "purpose": "Constrain agent coordination using explicit permissions, evidence and reviewed actions.",
+      "status": "connector blocked prior audit",
+      "evidence": "Legacy COMPLETE label conflicts with disabled coordination/auth evidence",
+      "result": "Legacy COMPLETE label conflicts with disabled coordination/auth evidence This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Repair connectors then bounded agent evaluations",
+      "completion_gate": "Reliable evaluated read-only/approved-action workflows",
+      "score": 35,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 0,
+          "evidence": "Original artifacts remain local or access has not been established."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Repair connectors then bounded agent evaluations",
+      "submission_status": "Not an academic submission claim",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer"
+      ],
+      "platforms": [
+        "Local source"
+      ]
+    },
+    {
+      "id": "TASK-REGISTER",
+      "name": "Task/register orchestration",
+      "category": "Agents & automation",
+      "priority": "P1",
+      "purpose": "Maintain consistent project IDs, task states and next actions across the portfolio and control sheets.",
+      "status": "stale status conflicts",
+      "evidence": "Legacy registry overstates archive/Four-C operation",
+      "result": "Legacy registry overstates archive/Four-C operation This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Map IDs and derive status from dated evidence",
+      "completion_gate": "No duplicate or obsolete active tasks",
+      "score": 40,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 5,
+          "evidence": "Original Drive/Colab links located; reviewer permissions are not verified."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [
+        {
+          "id": "1ledXh-ACnaKfJ-_FQmF9rZBZGc-Xil_yya3rBFUbNpI",
+          "title": "Portfolio Control Centre",
+          "url": "https://docs.google.com/spreadsheets/d/1ledXh-ACnaKfJ-_FQmF9rZBZGc-Xil_yya3rBFUbNpI/edit?usp=drivesdk",
+          "kind": "Google Drive document",
+          "access": "Existing Google sharing applies; anonymous access not verified",
+          "project_id": "TASK-REGISTER",
+          "verified": "Metadata located; submission and final version not verified"
+        }
+      ],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Map IDs and derive status from dated evidence",
+      "submission_status": "Not an academic submission claim",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer"
+      ],
+      "platforms": [
+        "Local source",
+        "Google Drive"
+      ]
+    },
+    {
+      "id": "FINANCE-LAB",
+      "name": "Finance Lab",
+      "category": "Financial systems",
+      "priority": "P1",
+      "purpose": "Provide a research workspace for market evidence, evaluation and read-only financial dashboards.",
+      "status": "research exists operational gaps",
+      "evidence": "19 September capture audit",
+      "result": "A saved dashboard report describes a read-only 33-page local server. It is not publicly deployed, and the report is historical rather than a current health check.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Reconcile data lineage and evaluation",
+      "completion_gate": "Reproducible cloud research case study",
+      "score": 35,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 0,
+          "evidence": "Original artifacts remain local or access has not been established."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Reconcile data lineage and evaluation",
+      "submission_status": "Not an academic submission claim",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer"
+      ],
+      "platforms": [
+        "Local source"
+      ]
+    },
+    {
+      "id": "FINANCE-INGEST",
+      "name": "Market data ingestion",
+      "category": "Financial systems",
+      "priority": "P1",
+      "purpose": "Capture dated market observations and surface gaps, failures and source freshness.",
+      "status": "recent capture with warnings",
+      "evidence": "18 September capture through 17 September; retained gold/silver snapshots",
+      "result": "18 September capture through 17 September; retained gold/silver snapshots This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Calendar-gap report; check failed symbol/oil",
+      "completion_gate": "Expected completed sessions captured or gaps explained",
+      "score": 35,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 0,
+          "evidence": "Original artifacts remain local or access has not been established."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Calendar-gap report; check failed symbol/oil",
+      "submission_status": "Not an academic submission claim",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer"
+      ],
+      "platforms": [
+        "Local source"
+      ]
+    },
+    {
+      "id": "FINANCE-EWMA",
+      "name": "EWMA shadow observation",
+      "category": "Financial systems",
+      "priority": "P1",
+      "purpose": "Track EWMA shadow observations without confusing scheduled runs with a reconciled evaluation history.",
+      "status": "recent runs register reconciliation needed",
+      "evidence": "September weekday artifacts; latest exit 0; one aggregate row",
+      "result": "September weekday artifacts; latest exit 0; one aggregate row This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Reconcile manifests and history",
+      "completion_gate": "Provenance-preserving complete observation register",
+      "score": 35,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 0,
+          "evidence": "Original artifacts remain local or access has not been established."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Reconcile manifests and history",
+      "submission_status": "Not an academic submission claim",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer"
+      ],
+      "platforms": [
+        "Local source"
+      ]
+    },
+    {
+      "id": "FINANCE-GOLD",
+      "name": "Gold forward observation",
+      "category": "Financial systems",
+      "priority": "P1",
+      "purpose": "Maintain forward gold observations with point-in-time inputs and traceable corrections.",
+      "status": "timestamp provenance review required",
+      "evidence": "Decision date precedes latest input in inspected ledger",
+      "result": "Decision date precedes latest input in inspected ledger This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Audit point-in-time inputs and weekly append",
+      "completion_gate": "No lookahead claims; immutable corrections and verified schedule",
+      "score": 35,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 0,
+          "evidence": "Original artifacts remain local or access has not been established."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Audit point-in-time inputs and weekly append",
+      "submission_status": "Not an academic submission claim",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer"
+      ],
+      "platforms": [
+        "Local source"
+      ]
+    },
+    {
+      "id": "FINANCE-METALS",
+      "name": "Verified metals monitor",
+      "category": "Financial systems",
+      "priority": "P1",
+      "purpose": "Monitor metals sources while explicitly distinguishing stale, unavailable and verified observations.",
+      "status": "stale and failed sources",
+      "evidence": "19 September source freshness/failure CSVs",
+      "result": "19 September source freshness/failure CSVs This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Repair/classify source failures and forecast date semantics",
+      "completion_gate": "Release-aware freshness with explicit failures",
+      "score": 35,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 0,
+          "evidence": "Original artifacts remain local or access has not been established."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Repair/classify source failures and forecast date semantics",
+      "submission_status": "Not an academic submission claim",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer"
+      ],
+      "platforms": [
+        "Local source"
+      ]
+    },
+    {
+      "id": "HYBRID",
+      "name": "Hybrid trading",
+      "category": "Financial systems",
+      "priority": "P1",
+      "purpose": "Explore a combined financial-data and trading-research pipeline with staged paper validation and recoverable source.",
+      "status": "capture broken backup repaired",
+      "evidence": "Missing price/RSS scripts; 2204-file local backup verified",
+      "result": "Missing price/RSS scripts; 2204-file local backup verified This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Restore canonical scripts; test staged paper pipeline",
+      "completion_gate": "Reproducible capture/evaluation with no live execution",
+      "score": 35,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 0,
+          "evidence": "Original artifacts remain local or access has not been established."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Restore canonical scripts; test staged paper pipeline",
+      "submission_status": "Not an academic submission claim",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer"
+      ],
+      "platforms": [
+        "Local source"
+      ]
+    },
+    {
+      "id": "FINVIZ",
+      "name": "Finviz gap scanner",
+      "category": "Financial systems",
+      "priority": "P2",
+      "purpose": "Explore market-gap screening from Finviz data; the located implementation still needs a current scope and execution review.",
+      "status": "discovered unassessed",
+      "evidence": "Directory located; not in original 22-row estimate",
+      "result": "Directory located; not in original 22-row estimate This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Read objective and entrypoints",
+      "completion_gate": "Define finite release and evidence",
+      "score": 35,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 0,
+          "evidence": "Original artifacts remain local or access has not been established."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Read objective and entrypoints",
+      "submission_status": "Not an academic submission claim",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer"
+      ],
+      "platforms": [
+        "Local source"
+      ]
+    },
+    {
+      "id": "BITGET",
+      "name": "Bitget trading bot",
+      "category": "Financial systems",
+      "priority": "P2",
+      "purpose": "Review an exchange-specific trading-bot implementation through a bounded paper/demo evaluation before any live use.",
+      "status": "discovered unassessed",
+      "evidence": "Directory located; no execution performed",
+      "result": "Directory located; no execution performed This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Audit purpose/configuration read-only",
+      "completion_gate": "Define and validate bounded paper/demo release",
+      "score": 35,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 0,
+          "evidence": "Original artifacts remain local or access has not been established."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Audit purpose/configuration read-only",
+      "submission_status": "Not an academic submission claim",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer"
+      ],
+      "platforms": [
+        "Local source"
+      ]
+    },
+    {
+      "id": "REVX",
+      "name": "RevX grid bot",
+      "category": "Financial systems",
+      "priority": "P2",
+      "purpose": "Review grid-bot logic and configuration through a bounded paper/demo experiment.",
+      "status": "discovered unassessed",
+      "evidence": "Directory located; no execution performed",
+      "result": "Directory located; no execution performed This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Audit purpose/configuration read-only",
+      "completion_gate": "Define and validate bounded paper/demo release",
+      "score": 35,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 0,
+          "evidence": "Original artifacts remain local or access has not been established."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Audit purpose/configuration read-only",
+      "submission_status": "Not an academic submission claim",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer"
+      ],
+      "platforms": [
+        "Local source"
+      ]
+    },
+    {
+      "id": "DRONES",
+      "name": "Drone robotics",
+      "category": "Agents & automation",
+      "priority": "P2",
+      "purpose": "Connect robotics prototypes with reproducible software and hardware experiment evidence.",
+      "status": "experiment evidence review needed",
+      "evidence": "6GB project located; prior bounded prototype evidence",
+      "result": "6GB project located; prior bounded prototype evidence This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Inventory offline/live experiment evidence",
+      "completion_gate": "Reproducible bounded release and hardware validation",
+      "score": 35,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 0,
+          "evidence": "Original artifacts remain local or access has not been established."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Inventory offline/live experiment evidence",
+      "submission_status": "Not an academic submission claim",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer"
+      ],
+      "platforms": [
+        "Local source"
+      ]
+    },
+    {
+      "id": "GOOGLE",
+      "name": "Google/Gmail integration",
+      "category": "Agents & automation",
+      "priority": "P1",
+      "purpose": "Integrate Google/Gmail workflows with explicit authentication and failure reporting.",
+      "status": "auth blocked prior audit",
+      "evidence": "Saved source health says authentication required",
+      "result": "Saved source health says authentication required This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Fresh least-privilege authentication test",
+      "completion_gate": "Refresh and failure reporting verified",
+      "score": 35,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 0,
+          "evidence": "Original artifacts remain local or access has not been established."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Fresh least-privilege authentication test",
+      "submission_status": "Not an academic submission claim",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer"
+      ],
+      "platforms": [
+        "Local source"
+      ]
+    },
+    {
+      "id": "APPS-SCRIPT",
+      "name": "Google Apps Script/Energy Desk",
+      "category": "Agents & automation",
+      "priority": "P2",
+      "purpose": "Move Energy Desk refresh coordination into a London-time Apps Script dispatcher with daily, weekday and Monday branches.",
+      "status": "source inspected remote trigger unverified",
+      "evidence": "Daily London dispatcher, weekday/Monday branches, locks and QA in local Apps Script source; remote install not verified",
+      "result": "Source includes a script lock, one daily dispatcher, weekday and Monday branches, credential-blocked states and two QA checks. A saved source file does not verify that remote triggers are installed.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Audit remote bound script, OAuth scopes and triggers; test a copy before changing production",
+      "completion_gate": "Intended triggers and dispatcher QA pass",
+      "score": 55,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 20,
+          "evidence": "Source content inspected."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 5,
+          "evidence": "Setup/dispatcher source inspected; remote runtime execution pending."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 5,
+          "evidence": "Original Drive/Colab links located; reviewer permissions are not verified."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [
+        {
+          "id": "1nJNmk6-hHgk0rGtHOuoGPvHLCR7daR136ZD1Rt2y2OU",
+          "title": "Global Energy Storage Monitor workbook",
+          "url": "https://docs.google.com/spreadsheets/d/1nJNmk6-hHgk0rGtHOuoGPvHLCR7daR136ZD1Rt2y2OU/edit?usp=drivesdk",
+          "kind": "Google Sheets dashboard",
+          "access": "Existing Google permissions apply; anonymous access not verified",
+          "project_id": "APPS-SCRIPT",
+          "verified": "Workbook metadata verified 20 September; modification time is not proof of successful trigger execution"
+        },
+        {
+          "id": "1p_Cs-EU28KGVL_EFIAYFlLLUzuSbTkvImeVtD-UZfS0",
+          "title": "Institutional Energy Desk workbook",
+          "url": "https://docs.google.com/spreadsheets/d/1p_Cs-EU28KGVL_EFIAYFlLLUzuSbTkvImeVtD-UZfS0/edit?usp=drivesdk",
+          "kind": "Google Sheets dashboard",
+          "access": "Existing Google permissions apply; anonymous access not verified",
+          "project_id": "APPS-SCRIPT",
+          "verified": "Workbook metadata verified 20 September; modification time is not proof of successful trigger execution"
+        }
+      ],
+      "run_steps": [
+        "Inspect Code.gs and appsscript.json before importing into a test copy.",
+        "Review spreadsheet, trigger and external-fetch permissions and source credentials.",
+        "Run the dispatcher in a copy, inspect both QA results, then verify its single London-time trigger."
+      ],
+      "requirements": "Google Apps Script V8; authorised workbook copies; applicable data-source credentials.",
+      "limitations": "Setup deletes matching obsolete triggers. Do not run setup on the production workbook as a demonstration. Current remote triggers are unverified.",
+      "submission_status": "Not an academic submission claim",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer"
+      ],
+      "platforms": [
+        "Google Apps Script",
+        "Google Sheets"
+      ]
+    },
+    {
+      "id": "CHATGPT-HISTORY-INGESTION",
+      "name": "ChatGPT archive",
+      "category": "Agents & automation",
+      "priority": "P1",
+      "purpose": "Preserve and index conversation history as a traceable project knowledge source.",
+      "status": "login blocked prior audit",
+      "evidence": "19 September checkpoint; newest inspected files 3 August",
+      "result": "19 September checkpoint; newest inspected files 3 August This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Restore login and reconcile archive inventory",
+      "completion_gate": "Fresh local capture and remotely verified copy",
+      "score": 35,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 0,
+          "evidence": "Original artifacts remain local or access has not been established."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Restore login and reconcile archive inventory",
+      "submission_status": "Not an academic submission claim",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer"
+      ],
+      "platforms": [
+        "Local source"
+      ]
+    },
+    {
+      "id": "LOCAL-LLM",
+      "name": "Local model integration",
+      "category": "Agents & automation",
+      "priority": "P2",
+      "purpose": "Evaluate local language-model integrations against actual workflow quality, latency and resource requirements.",
+      "status": "requires current review",
+      "evidence": "Model/tool directories located",
+      "result": "Model/tool directories located This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Benchmark actual workflows",
+      "completion_gate": "Measured quality/cost/latency and supported integration",
+      "score": 35,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 0,
+          "evidence": "Original artifacts remain local or access has not been established."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Benchmark actual workflows",
+      "submission_status": "Not an academic submission claim",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer"
+      ],
+      "platforms": [
+        "Local source"
+      ]
+    },
+    {
+      "id": "UNITY-AGENTS",
+      "name": "Unity AI agents",
+      "category": "Agents & automation",
+      "priority": "P2",
+      "purpose": "Build and evaluate a bounded Unity agent scenario with reproducible inputs and outcomes.",
+      "status": "requires current review",
+      "evidence": "Canonical directory located",
+      "result": "Canonical directory located This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Define deterministic demo",
+      "completion_gate": "Reproducible build and evaluated scenario",
+      "score": 35,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 0,
+          "evidence": "Original artifacts remain local or access has not been established."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Define deterministic demo",
+      "submission_status": "Not an academic submission claim",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer"
+      ],
+      "platforms": [
+        "Local source"
+      ]
+    },
+    {
+      "id": "N8N",
+      "name": "n8n automation",
+      "category": "Agents & automation",
+      "priority": "P2",
+      "purpose": "Coordinate reusable automation workflows with documented runtime, credentials and recovery.",
+      "status": "runtime unverified",
+      "evidence": "Configuration and Docker directories located",
+      "result": "Configuration and Docker directories located This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Inventory workflows and credentials without exposing values",
+      "completion_gate": "Supported runtime, workflow tests and restore",
+      "score": 35,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 0,
+          "evidence": "Original artifacts remain local or access has not been established."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Inventory workflows and credentials without exposing values",
+      "submission_status": "Not an academic submission claim",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer"
+      ],
+      "platforms": [
+        "Local source"
+      ]
+    },
+    {
+      "id": "HOMEASSISTANT",
+      "name": "Home Assistant",
+      "category": "Agents & automation",
+      "priority": "P2",
+      "purpose": "Organise local device automation with clear gateway dependencies and recovery procedures.",
+      "status": "runtime unverified",
+      "evidence": "Configuration directory located",
+      "result": "Configuration directory located This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Inventory actual runtime and device dependencies",
+      "completion_gate": "Supported local gateway with recovery",
+      "score": 35,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 0,
+          "evidence": "Original artifacts remain local or access has not been established."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Inventory actual runtime and device dependencies",
+      "submission_status": "Not an academic submission claim",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer"
+      ],
+      "platforms": [
+        "Local source"
+      ]
+    },
+    {
+      "id": "N8N-ENERGY",
+      "name": "n8n energy alerts",
+      "category": "Agents & automation",
+      "priority": "P2",
+      "purpose": "Explore energy-alert workflows and reconcile their responsibilities with the Energy Desk dispatcher.",
+      "status": "discovered unassessed",
+      "evidence": "Directory located",
+      "result": "Directory located This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Determine relationship to Apps Script Energy Desk",
+      "completion_gate": "Single canonical responsibility and tested workflow",
+      "score": 35,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 0,
+          "evidence": "Original artifacts remain local or access has not been established."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Determine relationship to Apps Script Energy Desk",
+      "submission_status": "Not an academic submission claim",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer"
+      ],
+      "platforms": [
+        "Local source"
+      ]
+    },
+    {
+      "id": "JOBS",
+      "name": "Job search and application package",
+      "category": "Applications & cloud",
+      "priority": "P1",
+      "purpose": "Connect verified engineering work to target roles, a reviewed CV and an application evidence package.",
+      "status": "portfolio website deployed application package pending",
+      "evidence": "Engineering portfolio deployed on AWS; case studies, source download and browser demonstration included",
+      "result": "Engineering portfolio deployed on AWS; case studies, source download and browser demonstration included This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Align CV and selected case studies with target roles; build application tracker",
+      "completion_gate": "Reviewed case studies/CV/application tracker",
+      "score": 35,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 0,
+          "evidence": "Original artifacts remain local or access has not been established."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Align CV and selected case studies with target roles; build application tracker",
+      "submission_status": "Not an academic submission claim",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer"
+      ],
+      "platforms": [
+        "Local source"
+      ]
+    },
+    {
+      "id": "LEGACY-MSC",
+      "name": "Legacy MSc data-mining project",
+      "category": "Research & MSc",
+      "priority": "ACADEMIC",
+      "purpose": "Preserve and reconcile earlier data-mining coursework with current academic projects.",
+      "status": "discovered unassessed",
+      "evidence": "Separate directory from canonical dissertation",
+      "result": "Separate directory from canonical dissertation This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Map overlap and preserve unique artifacts",
+      "completion_gate": "Clear canonical/reference relationship",
+      "score": 35,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 0,
+          "evidence": "Original artifacts remain local or access has not been established."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Map overlap and preserve unique artifacts",
+      "submission_status": "Submission receipt / examiner acceptance not verified",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer",
+        "examiner"
+      ],
+      "platforms": [
+        "Local source"
+      ]
+    },
+    {
+      "id": "MSC-VISUALISATION",
+      "name": "MSc energy data visualisation",
+      "category": "Research & MSc",
+      "priority": "ACADEMIC",
+      "purpose": "Explain energy-data patterns through Tableau workbooks, supporting data and presentation artifacts.",
+      "status": "artifacts located review pending",
+      "evidence": "Tableau workbook, PDFs and data located",
+      "result": "Tableau workbook, PDFs and data located This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Review narrative, data rights and reproducibility",
+      "completion_gate": "Reviewed visualisation case study with reproducible source data",
+      "score": 40,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 5,
+          "evidence": "Original Drive/Colab links located; reviewer permissions are not verified."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [
+        {
+          "id": "1TRuuK6RibqAUDJ0YMs4SRuJ3s5H9Yo796lRG94N839s",
+          "title": "Macro Energy Story presentation",
+          "url": "https://docs.google.com/presentation/d/1TRuuK6RibqAUDJ0YMs4SRuJ3s5H9Yo796lRG94N839s/edit?usp=drivesdk",
+          "kind": "Google Drive document",
+          "access": "Existing Google sharing applies; anonymous access not verified",
+          "project_id": "MSC-VISUALISATION",
+          "verified": "Metadata located; submission and final version not verified"
+        },
+        {
+          "id": "157p1YviblwrS-JRbNebuQsmd_-_w-fHz",
+          "title": "Macro Energy Story PDF",
+          "url": "https://drive.google.com/file/d/157p1YviblwrS-JRbNebuQsmd_-_w-fHz/view?usp=drivesdk",
+          "kind": "Google Drive document",
+          "access": "Existing Google sharing applies; anonymous access not verified",
+          "project_id": "MSC-VISUALISATION",
+          "verified": "Metadata located; submission and final version not verified"
+        }
+      ],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Review narrative, data rights and reproducibility",
+      "submission_status": "Submission receipt / examiner acceptance not verified",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer",
+        "examiner"
+      ],
+      "platforms": [
+        "Local source",
+        "Google Drive"
+      ]
+    },
+    {
+      "id": "MSC-URANIUM",
+      "name": "MSc uranium data science",
+      "category": "Research & MSc",
+      "priority": "ACADEMIC",
+      "purpose": "Explore uranium and energy datasets through a data-science notebook and written report.",
+      "status": "artifacts located review pending",
+      "evidence": "Project PDF, notebook and instructions located",
+      "result": "Project PDF, notebook and instructions located This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Review methods, results and notebook execution",
+      "completion_gate": "Reproducible notebook and supported findings",
+      "score": 40,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 5,
+          "evidence": "Original Drive/Colab links located; reviewer permissions are not verified."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [
+        {
+          "id": "1LzK3pDc3G2Ho4pT89U1UyX6hZJpAP33q",
+          "title": "Uranium data-science report",
+          "url": "https://drive.google.com/file/d/1LzK3pDc3G2Ho4pT89U1UyX6hZJpAP33q/view?usp=drivesdk",
+          "kind": "Google Drive document",
+          "access": "Existing Google sharing applies; anonymous access not verified",
+          "project_id": "MSC-URANIUM",
+          "verified": "Metadata located; submission and final version not verified"
+        }
+      ],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Review methods, results and notebook execution",
+      "submission_status": "Submission receipt / examiner acceptance not verified",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer",
+        "examiner"
+      ],
+      "platforms": [
+        "Local source",
+        "Google Drive"
+      ]
+    },
+    {
+      "id": "MSC-USB-ASSIGNMENTS",
+      "name": "MSc archived assignments",
+      "category": "Research & MSc",
+      "priority": "ACADEMIC",
+      "purpose": "Preserve assignment notebooks and HTML exports, then identify authoritative module deliverables.",
+      "status": "artifacts located review pending",
+      "evidence": "Assignment notebooks and HTML exports located",
+      "result": "Assignment notebooks and HTML exports located This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Map assignments to modules and remove duplicate references",
+      "completion_gate": "Canonical coursework inventory and selected case studies",
+      "score": 35,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 0,
+          "evidence": "Original artifacts remain local or access has not been established."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Map assignments to modules and remove duplicate references",
+      "submission_status": "Submission receipt / examiner acceptance not verified",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer",
+        "examiner"
+      ],
+      "platforms": [
+        "Local source"
+      ]
+    },
+    {
+      "id": "MSC-AWS-LAB",
+      "name": "MSc AWS cloud migration lab",
+      "category": "Research & MSc",
+      "priority": "ACADEMIC",
+      "purpose": "Explain a cloud migration and event-driven AWS lab using a written report and historical console evidence.",
+      "status": "historical evidence located",
+      "evidence": "Drive report and local screenshots located; current cloud state unverified",
+      "result": "Drive report and local screenshots located; current cloud state unverified This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Reconcile final report and redact selected screenshots",
+      "completion_gate": "Reviewed architecture case study linked to reproducible implementation",
+      "score": 55,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 20,
+          "evidence": "Source content inspected."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 15,
+          "evidence": "Detailed case study with supporting source links/downloads."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 5,
+          "evidence": "Original Drive/Colab links located; reviewer permissions are not verified."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [
+        {
+          "id": "msc-aws-report",
+          "title": "MSc AWS cloud migration report",
+          "url": "https://docs.google.com/document/d/18EiRuTNgalWoQeUjnrwU9CI6s634SqyMuN7JDDqy2nM/edit",
+          "kind": "Google Drive document",
+          "access": "Google permission may be required",
+          "project_id": "MSC-AWS-LAB",
+          "verified": "Report text inspected; formal submission receipt not located"
+        }
+      ],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Reconcile final report and redact selected screenshots",
+      "submission_status": "Submission receipt / examiner acceptance not verified",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer",
+        "examiner"
+      ],
+      "platforms": [
+        "Local source",
+        "Google Drive"
+      ]
+    },
+    {
+      "id": "COLAB-ML",
+      "name": "Colab neural-network coursework",
+      "category": "Research & MSc",
+      "priority": "ACADEMIC",
+      "purpose": "Study handwritten-digit classification and sigmoid gradients using TensorFlow notebooks, explanatory notes and evaluation code.",
+      "status": "source inspected rerun pending",
+      "evidence": "MNIST and sigmoid notebooks inspected; sanitized review copies prepared",
+      "result": "Inspected source includes MNIST preprocessing, a dense classifier, a held-out evaluation call, and a sigmoid automatic-versus-numerical gradient comparison. Saved notes are historical; fresh runtime results are not yet recorded.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Run clean TensorFlow sessions and save environment/results",
+      "completion_gate": "Reviewable code, fresh execution and limitations",
+      "score": 70,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 20,
+          "evidence": "Source content inspected."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 5,
+          "evidence": "Review copies and execution instructions prepared; TensorFlow rerun pending."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 5,
+          "evidence": "Evaluation code inspected; historical notebook outputs are not a fresh run."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 15,
+          "evidence": "Detailed case study with supporting source links/downloads."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Public runnable or downloadable demonstration."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [
+        {
+          "id": "1eqkEEZeoxSby4pF0vy7wwURXoZNN3LT5",
+          "title": "Image Classification MNIST.ipynb",
+          "url": "https://colab.research.google.com/drive/1eqkEEZeoxSby4pF0vy7wwURXoZNN3LT5",
+          "kind": "Colab notebook",
+          "access": "Google permission required; sharing unchanged",
+          "project_id": "COLAB-ML",
+          "verified": "Source inspected; not rerun"
+        },
+        {
+          "id": "1RBy2yt-jfKP_MFQuVjCTCXw1bBwkawcQ",
+          "title": "tensorflow_sigmoid_gradient_computation.ipynb",
+          "url": "https://colab.research.google.com/drive/1RBy2yt-jfKP_MFQuVjCTCXw1bBwkawcQ",
+          "kind": "Colab notebook",
+          "access": "Google permission required; sharing unchanged",
+          "project_id": "COLAB-ML",
+          "verified": "Source inspected; not rerun"
+        }
+      ],
+      "run_steps": [
+        "Download a sanitized notebook below, then use Colab File → Upload notebook.",
+        "Use a fresh Python runtime; inspect dependencies and cells before Run all.",
+        "Record TensorFlow version, outputs and errors; compare held-out results or gradient error with the stated method."
+      ],
+      "requirements": "Google Colab or Jupyter; TensorFlow, NumPy and Matplotlib. MNIST needs a dataset download.",
+      "limitations": "The recovered coursework copies were inspected and compiled, not freshly trained in this audit. Review copies omit original outputs and personal execution metadata.",
+      "submission_status": "Submission receipt / examiner acceptance not verified",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer",
+        "examiner"
+      ],
+      "platforms": [
+        "Local source",
+        "Colab"
+      ]
+    },
+    {
+      "id": "COLAB-MARKETS",
+      "name": "Colab market-regime experiments",
+      "category": "Research & MSc",
+      "priority": "ACADEMIC",
+      "purpose": "Explore market clustering and gold/silver modelling through Colab notebooks; distinguish exploratory full-data fitting from out-of-sample evidence.",
+      "status": "notebooks located method review required",
+      "evidence": "Market notebooks located; Regimes source inspected; full-data clustering is exploratory",
+      "result": "The inspected regime experiment uses StandardScaler and KMeans on the full feature dataset, and records a PyCaret/Python compatibility workaround. A leakage-safe forecast evaluation has not been established.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Freeze inputs; isolate train/test periods; pin dependencies",
+      "completion_gate": "Reproducible leakage-aware experiment with baseline",
+      "score": 50,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 20,
+          "evidence": "Source content inspected."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 5,
+          "evidence": "Original Drive/Colab links located; reviewer permissions are not verified."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [
+        {
+          "id": "1Lt0v0ef80EQHTWabe9JSPsekJWMzRKEL",
+          "title": "Silver.ipynb",
+          "url": "https://colab.research.google.com/drive/1Lt0v0ef80EQHTWabe9JSPsekJWMzRKEL",
+          "kind": "Colab notebook",
+          "access": "Google permission required; sharing unchanged",
+          "project_id": "COLAB-MARKETS",
+          "verified": "Metadata located; code/run not audited"
+        },
+        {
+          "id": "1oKTmpyczjQKXymAIAAUBZjLPUxm0bc_f",
+          "title": "Regimes.ipynb",
+          "url": "https://colab.research.google.com/drive/1oKTmpyczjQKXymAIAAUBZjLPUxm0bc_f",
+          "kind": "Colab notebook",
+          "access": "Google permission required; sharing unchanged",
+          "project_id": "COLAB-MARKETS",
+          "verified": "Source inspected; not rerun"
+        },
+        {
+          "id": "1tD-SYjlW-aVsHFSighdY9pgXxpa5FjoA",
+          "title": "SilverHeatmap.ipynb",
+          "url": "https://colab.research.google.com/drive/1tD-SYjlW-aVsHFSighdY9pgXxpa5FjoA",
+          "kind": "Colab notebook",
+          "access": "Google permission required; sharing unchanged",
+          "project_id": "COLAB-MARKETS",
+          "verified": "Metadata located; code/run not audited"
+        },
+        {
+          "id": "1TByZf5-FZgfDAXCAlH-rFgnVyWTC1OLa",
+          "title": "GoldDeepML.ipynb",
+          "url": "https://colab.research.google.com/drive/1TByZf5-FZgfDAXCAlH-rFgnVyWTC1OLa",
+          "kind": "Colab notebook",
+          "access": "Google permission required; sharing unchanged",
+          "project_id": "COLAB-MARKETS",
+          "verified": "Metadata located; code/run not audited"
+        },
+        {
+          "id": "1qoen0KJvdpxmGBC1o12ZLsMqd0UObah9",
+          "title": "GoldMLMScFRED.ipynb",
+          "url": "https://colab.research.google.com/drive/1qoen0KJvdpxmGBC1o12ZLsMqd0UObah9",
+          "kind": "Colab notebook",
+          "access": "Google permission required; sharing unchanged",
+          "project_id": "COLAB-MARKETS",
+          "verified": "Metadata located; code/run not audited"
+        },
+        {
+          "id": "1J2BVWYE8T_qhdF-8Dgo6wUqsx6oIVxwG",
+          "title": "MachineLearningGOLD.ipynb",
+          "url": "https://colab.research.google.com/drive/1J2BVWYE8T_qhdF-8Dgo6wUqsx6oIVxwG",
+          "kind": "Colab notebook",
+          "access": "Google permission required; sharing unchanged",
+          "project_id": "COLAB-MARKETS",
+          "verified": "Metadata located; code/run not audited"
+        },
+        {
+          "id": "11mrnsks7nMsezSkIVgWAA4cLoTorXxYZ",
+          "title": "Regime_Weighted_Leverage_Engine_v1.ipynb",
+          "url": "https://colab.research.google.com/drive/11mrnsks7nMsezSkIVgWAA4cLoTorXxYZ",
+          "kind": "Colab notebook",
+          "access": "Google permission required; sharing unchanged",
+          "project_id": "COLAB-MARKETS",
+          "verified": "Metadata located; code/run not audited"
+        },
+        {
+          "id": "1UDMvQ_jgx2gh-dqgeQsIEIOEV0ghQBJb",
+          "title": "PAXGbacktest.ipynb",
+          "url": "https://colab.research.google.com/drive/1UDMvQ_jgx2gh-dqgeQsIEIOEV0ghQBJb",
+          "kind": "Colab notebook",
+          "access": "Google permission required; sharing unchanged",
+          "project_id": "COLAB-MARKETS",
+          "verified": "Metadata located; code/run not audited"
+        }
+      ],
+      "run_steps": [
+        "Open a permission-controlled original notebook.",
+        "Freeze the market-data snapshot and pin compatible dependencies.",
+        "Separate train/test time windows before interpreting clusters or comparing a strategy."
+      ],
+      "requirements": "Colab, market-data access and notebook-specific Python libraries.",
+      "limitations": "The inspected Regimes notebook fits clustering on the full dataset and records a PyCaret compatibility issue. It is exploratory, not validated forecasting.",
+      "submission_status": "Submission receipt / examiner acceptance not verified",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer",
+        "examiner"
+      ],
+      "platforms": [
+        "Source review pending",
+        "Colab"
+      ]
+    },
+    {
+      "id": "MSC-OULAD",
+      "name": "OULAD learning-analytics research",
+      "category": "Research & MSc",
+      "priority": "ACADEMIC",
+      "purpose": "Explore educational learning analytics using an OULAD draft and notebook export, preserving its lineage separately from the HMM dissertation.",
+      "status": "draft and notebook export located",
+      "evidence": "Drive draft and notebook export located; separate from current HMM dissertation",
+      "result": "Drive draft and notebook export located; separate from current HMM dissertation This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Resolve research lineage and identify authoritative version",
+      "completion_gate": "Reviewed educational-data study with reproducible evaluation",
+      "score": 40,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 5,
+          "evidence": "Original Drive/Colab links located; reviewer permissions are not verified."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [
+        {
+          "id": "1S7SkpH88Vm5vF-2k8donn9RloS-ZZo-d",
+          "title": "OULAD notebook text export",
+          "url": "https://drive.google.com/file/d/1S7SkpH88Vm5vF-2k8donn9RloS-ZZo-d/view?usp=drivesdk",
+          "kind": "Google Drive document",
+          "access": "Existing Google sharing applies; anonymous access not verified",
+          "project_id": "MSC-OULAD",
+          "verified": "Metadata located; submission and final version not verified"
+        },
+        {
+          "id": "1K5hlD89vX8hkOu6LrcEK10VHBulwkjSXvSn5PuO9viM",
+          "title": "OULAD dissertation draft",
+          "url": "https://docs.google.com/document/d/1K5hlD89vX8hkOu6LrcEK10VHBulwkjSXvSn5PuO9viM/edit?usp=drivesdk",
+          "kind": "Google Drive document",
+          "access": "Existing Google sharing applies; anonymous access not verified",
+          "project_id": "MSC-OULAD",
+          "verified": "Metadata located; submission and final version not verified"
+        }
+      ],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Resolve research lineage and identify authoritative version",
+      "submission_status": "Submission receipt / examiner acceptance not verified",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer",
+        "examiner"
+      ],
+      "platforms": [
+        "Source review pending",
+        "Google Drive"
+      ]
+    },
+    {
+      "id": "MSC-DEEP-LEARNING",
+      "name": "MSc deep-learning volatility study",
+      "category": "Research & MSc",
+      "priority": "ACADEMIC",
+      "purpose": "Document a deep-learning volatility study and reconcile the report with its actual experiment artifacts.",
+      "status": "report located review pending",
+      "evidence": "Drive report found; filename is not evidence of grade or submission",
+      "result": "Drive report found; filename is not evidence of grade or submission This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Inspect report and reconcile notebook/results",
+      "completion_gate": "Reviewed report with original experiment evidence",
+      "score": 40,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 5,
+          "evidence": "Original Drive/Colab links located; reviewer permissions are not verified."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [
+        {
+          "id": "1MRZVgSBMPCZQKqP6Ny7NQN452hj6FCtE",
+          "title": "Deep learning volatility report",
+          "url": "https://docs.google.com/document/d/1MRZVgSBMPCZQKqP6Ny7NQN452hj6FCtE/edit?usp=drivesdk&ouid=114314462636300144397&rtpof=true&sd=true",
+          "kind": "Google Drive document",
+          "access": "Existing Google sharing applies; anonymous access not verified",
+          "project_id": "MSC-DEEP-LEARNING",
+          "verified": "Metadata located; submission and final version not verified"
+        }
+      ],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Inspect report and reconcile notebook/results",
+      "submission_status": "Submission receipt / examiner acceptance not verified",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer",
+        "examiner"
+      ],
+      "platforms": [
+        "Source review pending",
+        "Google Drive"
+      ]
+    },
+    {
+      "id": "MSC-ROUTE-AGENT",
+      "name": "Intelligent route-finding agent",
+      "category": "Research & MSc",
+      "priority": "ACADEMIC",
+      "purpose": "Explain an intelligent route-finding agent and verify the algorithms, evaluation and original contribution behind the report.",
+      "status": "report located review pending",
+      "evidence": "Drive report located in coursework folder",
+      "result": "Drive report located in coursework folder This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Review algorithms, evaluation and contribution",
+      "completion_gate": "Executable route-finding demonstration and report",
+      "score": 40,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 5,
+          "evidence": "Original Drive/Colab links located; reviewer permissions are not verified."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [
+        {
+          "id": "routefinding-report",
+          "title": "Intelligent route-finding agent report",
+          "url": "https://docs.google.com/document/d/1_G6w_Otrx_xd6IE7yfvzad_OMw9BdDDhC6pM4YQigZw/edit",
+          "kind": "Google Drive document",
+          "access": "Google permission may be required",
+          "project_id": "MSC-ROUTE-AGENT",
+          "verified": "Report located in earlier Drive inventory; content review pending"
+        }
+      ],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Review algorithms, evaluation and contribution",
+      "submission_status": "Submission receipt / examiner acceptance not verified",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer",
+        "examiner"
+      ],
+      "platforms": [
+        "Source review pending",
+        "Google Drive"
+      ]
+    },
+    {
+      "id": "DRIVE-AUDIT",
+      "name": "Google Drive evidence organisation",
+      "category": "Agents & automation",
+      "priority": "P2",
+      "purpose": "Organise Google Drive evidence using audit code and control sheets without silently deleting or relocating originals.",
+      "status": "source and control sheets located",
+      "evidence": "Local Apps Script audit source and Drive control sheets located",
+      "result": "Local Apps Script audit source and Drive control sheets located This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Verify read-only audit results; preserve originals",
+      "completion_gate": "Traceable catalogue with duplicate/recovery evidence",
+      "score": 40,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 5,
+          "evidence": "Original Drive/Colab links located; reviewer permissions are not verified."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [
+        {
+          "id": "1EijaPTyQdBrXidiBxD7M01AJjQfw9j7P2vgPxD-IPxo",
+          "title": "Master content index",
+          "url": "https://docs.google.com/spreadsheets/d/1EijaPTyQdBrXidiBxD7M01AJjQfw9j7P2vgPxD-IPxo/edit?usp=drivesdk",
+          "kind": "Google Drive document",
+          "access": "Existing Google sharing applies; anonymous access not verified",
+          "project_id": "DRIVE-AUDIT",
+          "verified": "Metadata located; submission and final version not verified"
+        },
+        {
+          "id": "1A6nd5LTmhgA609st799YWt5NspZLcCQPb_y8jiGL_zw",
+          "title": "Drive empty-folder audit",
+          "url": "https://docs.google.com/spreadsheets/d/1A6nd5LTmhgA609st799YWt5NspZLcCQPb_y8jiGL_zw/edit?usp=drivesdk",
+          "kind": "Google Drive document",
+          "access": "Existing Google sharing applies; anonymous access not verified",
+          "project_id": "DRIVE-AUDIT",
+          "verified": "Metadata located; submission and final version not verified"
+        }
+      ],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Verify read-only audit results; preserve originals",
+      "submission_status": "Not an academic submission claim",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer"
+      ],
+      "platforms": [
+        "Local source",
+        "Google Drive"
+      ]
+    },
+    {
+      "id": "GMAIL-SCRIPT",
+      "name": "GmailOrganizer Apps Script",
+      "category": "Agents & automation",
+      "priority": "P2",
+      "purpose": "Document GmailOrganizer automation and reconcile its implementation with historical failure records.",
+      "status": "documentation and failure history located",
+      "evidence": "Drive script documentation and historical failure notices located",
+      "result": "Drive script documentation and historical failure notices located This is the current recorded evidence, not an independent production or submission certification.",
+      "reviewed_on": "2026-09-20",
+      "next_action": "Audit current script and triggers without sending or changing email",
+      "completion_gate": "Verified bounded automation with failure reporting",
+      "score": 40,
+      "gates": [
+        {
+          "id": "purpose",
+          "label": "Purpose and scope",
+          "max": 10,
+          "earned": 10,
+          "evidence": "Purpose and review scope described in this dossier."
+        },
+        {
+          "id": "artifact",
+          "label": "Implementation or research artifact",
+          "max": 20,
+          "earned": 10,
+          "evidence": "Source location or artifact metadata found; current contents not fully audited."
+        },
+        {
+          "id": "reproduce",
+          "label": "Reproducibility",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No verified end-to-end reproduction evidence reviewed."
+        },
+        {
+          "id": "evaluate",
+          "label": "Evaluation evidence",
+          "max": 20,
+          "earned": 0,
+          "evidence": "No fresh evaluation report verified for this review."
+        },
+        {
+          "id": "presentation",
+          "label": "Review package",
+          "max": 15,
+          "earned": 10,
+          "evidence": "Summary, purpose, evidence, run notes and next steps assembled; complete original review package pending."
+        },
+        {
+          "id": "access",
+          "label": "Reviewer access",
+          "max": 10,
+          "earned": 5,
+          "evidence": "Original Drive/Colab links located; reviewer permissions are not verified."
+        },
+        {
+          "id": "limits",
+          "label": "Limitations and next step",
+          "max": 5,
+          "earned": 5,
+          "evidence": "Explicit limitations, status and improvement action recorded."
+        }
+      ],
+      "scope": "Portfolio evidence readiness for this work sample; not a percentage of production or research completion.",
+      "resources": [
+        {
+          "id": "1RouTFl8XAxHk-_d1cX29NBHeQs-CJI5Jf3ByMT2KczE",
+          "title": "GmailOrganizer Apps Script documentation",
+          "url": "https://docs.google.com/document/d/1RouTFl8XAxHk-_d1cX29NBHeQs-CJI5Jf3ByMT2KczE/edit?usp=drivesdk",
+          "kind": "Google Drive document",
+          "access": "Existing Google sharing applies; anonymous access not verified",
+          "project_id": "GMAIL-SCRIPT",
+          "verified": "Metadata located; submission and final version not verified"
+        }
+      ],
+      "run_steps": [
+        "Inspect the evidence and identify the authoritative source version.",
+        "Write a bounded reproduction procedure and record its prerequisites.",
+        "Capture fresh output and a limitations note before increasing the readiness score."
+      ],
+      "requirements": "Project-specific runtime or document-review requirements have not yet been verified.",
+      "limitations": "No verified execution command is published for this project yet. Audit current script and triggers without sending or changing email",
+      "submission_status": "Not an academic submission claim",
+      "authorship": "Work collected in the owner’s project archive. Individual contribution, external libraries and any assisted development should be explained in review; sole authorship is not asserted by this index.",
+      "audiences": [
+        "employer"
+      ],
+      "platforms": [
+        "Source review pending",
+        "Google Drive"
+      ]
+    }
+  ],
+  "coverage": "All 46 currently registered projects/workstreams are indexed; 44 are public and 2 private. This is not a claim that every file, prior submission or remote script has been exhaustively recovered."
+}
